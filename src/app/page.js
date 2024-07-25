@@ -17,6 +17,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
+import { Tooltip } from "@nextui-org/tooltip";
 
 export default function Home() {
   return (
@@ -34,14 +35,57 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <div className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex"></div>
 
         <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] ">
           <div className="grid gap-3">
-            <h1 className="pointer-events-none font-inter font-bold text-6xl">
-              RIKI CHOI
-            </h1>
+            <div className="font-inter flex flex-row font-bold text-6xl">
+              <h1 className="w-full">RIKI CHOI</h1>
+              <div className="w-full gap-10 text-4xl flex justify-center text-center items-center flex-row">
+                <Tooltip showArrow={true} content="Download CV PDF">
+                  <a
+                    href="/files/Riki-Choi-Resume.pdf"
+                    alt="Riki Choi Resume"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex hover:text-red-600 items-center flex-row"
+                  >
+                    <FaDownload className="text-3xl" />
+                    <p className="ml-2 text-base"></p>
+                  </a>
+                </Tooltip>
+                <Tooltip showArrow={true} content="GitHub">
+                  <a
+                    href="https://github.com/rikichoi"
+                    target="_blank"
+                    className="flex hover:text-red-600 items-center flex-row"
+                  >
+                    <FaGithub />
+                    <p className="ml-2 text-base"></p>
+                  </a>
+                </Tooltip>
+                <Tooltip showArrow={true} content="LinkedIn">
+                  <a
+                    href="https://www.linkedin.com/in/rikichoi/"
+                    target="_blank"
+                    className="flex hover:text-red-600 items-center flex-row"
+                  >
+                    <FaLinkedin />
+                    <p className="ml-2 text-base"></p>
+                  </a>
+                </Tooltip>
+                <Tooltip showArrow={true} content="Email">
+                  <a
+                    href="mailto:choi.riki@gmail.com"
+                    className="flex hover:text-red-600 items-center flex-row"
+                  >
+                    <MdOutlineEmail />
+                    <p className="ml-2 text-base"></p>
+                  </a>
+                </Tooltip>
+              </div>
+            </div>
             <h1 className="pointer-events-none font-inter font-semibold text-3xl">
               FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
             </h1>
@@ -54,7 +98,7 @@ export default function Home() {
               </a>
               <a
                 href="#projects"
-                className="bg-gray-900 font-semi hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
+                className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
               >
                 PROJECTS
               </a>
@@ -63,7 +107,7 @@ export default function Home() {
         </div>
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
-      </main>
+      </div>
       <div className="grid grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
         <p className="pointer-events-none col-span-2 text-white font-poppins py-16 pl-24 text-4xl">
           I am an <b>enthusiastic developer</b> with a passion for creating{" "}
@@ -83,10 +127,10 @@ export default function Home() {
         className="scroll-mt-16 grid gap-5 min-h-screen grid-rows-5 bg-zinc-50 "
       >
         <div className="row-span-1 grid grid-cols-3 bg-zinc-50 ">
-          <div className="pointer-events-none font-bold flex gap-7 items-center flex-col col-span-2 text-gray-900 font-poppins py-16 pl-24 text-4xl">
+          <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900 font-poppins py-16 pl-24 text-4xl">
             PROJECTS
             <p className="text-xl text-center font-semibold justify-center flex text-black">
-              *demo account details provided in login pages*
+              *demo account details provided in project login pages*
             </p>
           </div>
           <div className="items-center flex justify-center">
@@ -255,7 +299,7 @@ export default function Home() {
               </div>
               <div className="w-1/2 gap-10 flex ml-auto items-center justify-end">
                 <a
-                  href="https://calorie-tracker-app-one.vercel.app/"
+                  href="https://youtu.be/EqkZ8--z3ag"
                   target="_blank"
                   className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
                 >
@@ -356,7 +400,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="contact" className="grid items-center min-h-screen text-white bg-zinc-900">
+      <div
+        id="contact"
+        className="grid items-center min-h-screen text-white bg-zinc-900"
+      >
         <div className="w-full font-poppins py-16 px-24 text-4xl">
           <h1 className="font-bold">CONTACT</h1>
           <p className="text-2xl">
@@ -364,55 +411,81 @@ export default function Home() {
             LinkedIn
           </p>
           <div className="py-10 w-full gap-10 text-4xl flex justify-center text-center items-center flex-row">
-            <a className="flex hover:text-red-600 items-center flex-row">
+            <a
+              href="/files/Riki-Choi-Resume.pdf"
+              alt="Riki Choi Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex hover:text-red-600 items-center flex-row"
+            >
               <FaDownload className="text-3xl" />
               <p className="ml-2 text-base">- Resume</p>
             </a>
-            <a href="https://github.com/rikichoi" target="_blank" className="flex hover:text-red-600 items-center flex-row">
+            <a
+              href="https://github.com/rikichoi"
+              target="_blank"
+              className="flex hover:text-red-600 items-center flex-row"
+            >
               <FaGithub />
               <p className="ml-2 text-base">- GitHub</p>
             </a>
-            <a href="https://www.linkedin.com/in/rikichoi/" target="_blank" className="flex hover:text-red-600 items-center flex-row">
+            <a
+              href="https://www.linkedin.com/in/rikichoi/"
+              target="_blank"
+              className="flex hover:text-red-600 items-center flex-row"
+            >
               <FaLinkedin />
               <p className="ml-2 text-base">- LinkedIn</p>
             </a>
-            <a href="mailto:choi.riki@gmail.com" className="flex hover:text-red-600 items-center flex-row">
+            <a
+              href="mailto:choi.riki@gmail.com"
+              className="flex hover:text-red-600 items-center flex-row"
+            >
               <MdOutlineEmail />
               <p className="ml-2 text-base">- Email - choi.riki@gmail.com</p>
             </a>
           </div>
-          <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
-            <div className="grid gap-5 w-full grid-cols-2">
-              <div className="grid grid-rows-3 w-full  gap-3">
-                <input
-                  placeholder="Name"
-                  className="w-full text-xl bg-zinc-700 py-2 px-2 "
-                ></input>
-                <input
-                  placeholder="Email"
-                  className="w-full text-xl bg-zinc-700 py-2 px-2"
-                ></input>
-                <input
-                  placeholder="Subject"
-                  className="w-full text-xl bg-zinc-700 py-2 px-2"
-                ></input>
-              </div>
-              <div className="grid w-full h-full gap-5">
-                <textarea
-                  placeholder="Message"
-                  className="w-full h-full text-xl bg-zinc-700 py-2 px-2 "
-                ></textarea>
+          <form
+            action="https://formsubmit.co/choi.riki@gmail.com"
+            method="POST"
+          >
+            <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
+              <div className="grid gap-5 w-full grid-cols-2">
+                <div className="grid grid-rows-3 w-full  gap-3">
+                  <input
+                    name="name"
+                    placeholder="Name"
+                    className="w-full text-xl bg-zinc-700 py-2 px-2 "
+                  ></input>
+                  <input
+                    name="email"
+                    placeholder="Email"
+                    className="w-full text-xl bg-zinc-700 py-2 px-2"
+                  ></input>
+                  <input
+                    name="subject"
+                    placeholder="Subject"
+                    className="w-full text-xl bg-zinc-700 py-2 px-2"
+                  ></input>
+                </div>
+                <div className="grid w-full h-full gap-5">
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    className="w-full h-full text-xl bg-zinc-700 py-2 px-2 "
+                  ></textarea>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="w-full flex justify-end py-5 items-end">
-            <a
-              href="#about"
-              className="bg-cyan-600 hover:bg-cyan-300 hover:text-black transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
-            >
-              SEND
-            </a>
-          </div>
+            <div className="w-full flex justify-end py-5 items-end">
+              <button
+                type="submit"
+                className="bg-cyan-600 hover:bg-cyan-300 hover:text-black transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
+              >
+                SEND
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
