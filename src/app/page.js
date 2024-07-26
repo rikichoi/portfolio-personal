@@ -22,7 +22,7 @@ import { Tooltip } from "@nextui-org/tooltip";
 export default function Home() {
   return (
     <div className="bg-gray-50">
-      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-12 md:px-44  min-h-20 bg-white border-b-2">
+      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-12 lg:px-44 min-h-20 bg-white border-b-2">
         <div className="flex justify-center items-center">
           <Image src={Logo} alt="my logo" className="max-w-44"></Image>
         </div>
@@ -36,75 +36,73 @@ export default function Home() {
         </div>
       </div>
       <div className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex"></div>
-
-          <div className="xs:grid grid gap-3">
-            <div className="xs:flex-col sm:flex-col font-inter flex xl:flex-row font-bold text-6xl">
-              <h1 className="w-full">RIKI CHOI</h1>
-              <div className=" sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex xl:justify-center text-center items-center flex-row">
-                <Tooltip showArrow={true} content="Download CV PDF">
-                  <a
-                    href="/files/Riki-Choi-Resume.pdf"
-                    alt="Riki Choi Resume"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex hover:text-red-600"
-                  >
-                    <FaDownload className="text-3xl" />
-                  </a>
-                </Tooltip>
-                <Tooltip showArrow={true} content="GitHub">
-                  <a
-                    href="https://github.com/rikichoi"
-                    target="_blank"
-                    className="flex hover:text-red-600"
-                  >
-                    <FaGithub />
-                  </a>
-                </Tooltip>
-                <Tooltip showArrow={true} content="LinkedIn">
-                  <a
-                    href="https://www.linkedin.com/in/rikichoi/"
-                    target="_blank"
-                    className="flex hover:text-red-600"
-                  >
-                    <FaLinkedin />
-                  </a>
-                </Tooltip>
-                <Tooltip showArrow={true} content="Email">
-                  <a
-                    href="mailto:choi.riki@gmail.com"
-                    className="flex hover:text-red-600"
-                  >
-                    <MdOutlineEmail />
-                  </a>
-                </Tooltip>
-              </div>
-            </div>
-            <h1 className="pointer-events-none font-inter font-semibold text-3xl">
-              FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
-            </h1>
-            <div className="flex z-40 flex-row gap-10">
-              <a
-                href="#about"
-                className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
-              >
-                ABOUT ME
-              </a>
-              <a
-                href="#projects"
-                className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
-              >
-                PROJECTS
-              </a>
+        <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex"></div>
+        <div className="xs:h-full w-full h-full grid gap-3">
+          <div className="xs:flex-col sm:flex-col font-inter flex xl:flex-row font-bold text-6xl">
+            <h1 className="w-full">RIKI CHOI</h1>
+            <div className=" sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex xl:justify-center text-center items-center flex-row">
+              <Tooltip showArrow={true} content="Download CV PDF">
+                <a
+                  href="/files/Riki-Choi-Resume.pdf"
+                  alt="Riki Choi Resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex hover:text-red-600"
+                >
+                  <FaDownload className="text-3xl" />
+                </a>
+              </Tooltip>
+              <Tooltip showArrow={true} content="GitHub">
+                <a
+                  href="https://github.com/rikichoi"
+                  target="_blank"
+                  className="flex hover:text-red-600"
+                >
+                  <FaGithub />
+                </a>
+              </Tooltip>
+              <Tooltip showArrow={true} content="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/in/rikichoi/"
+                  target="_blank"
+                  className="flex hover:text-red-600"
+                >
+                  <FaLinkedin />
+                </a>
+              </Tooltip>
+              <Tooltip showArrow={true} content="Email">
+                <a
+                  href="mailto:choi.riki@gmail.com"
+                  className="flex hover:text-red-600"
+                >
+                  <MdOutlineEmail />
+                </a>
+              </Tooltip>
             </div>
           </div>
-
+          <h1 className="pointer-events-none font-inter font-semibold text-3xl">
+            FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
+          </h1>
+          <div className="flex z-40 flex-row gap-10">
+            <a
+              href="#about"
+              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
+            >
+              ABOUT ME
+            </a>
+            <a
+              href="#projects"
+              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
+            >
+              PROJECTS
+            </a>
+          </div>
+        </div>
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
       </div>
-      <div className="grid grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <p className="pointer-events-none col-span-2 text-white font-poppins py-16 sm:pl-12 lg:pl-24 text-4xl">
+      <div className="grid sm:pb-10 sm:grid-cols-1 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
+        <p className="pointer-events-none col-span-2 text-white font-poppins py-16 sm:text-center sm:px-2 lg:pl-24 text-4xl">
           I am an <b>enthusiastic developer</b> with a passion for creating{" "}
           <b>solutions for complex problems.</b>
         </p>
@@ -121,8 +119,8 @@ export default function Home() {
         id="projects"
         className="scroll-mt-16 grid gap-5 min-h-screen grid-rows-5 bg-zinc-50 "
       >
-        <div className="row-span-1 grid grid-cols-3 bg-zinc-50 ">
-          <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900 font-poppins py-16 pl-24 text-4xl">
+        <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-zinc-50 ">
+          <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900 font-poppins py-16 sm:px-2 lg:px-12 text-4xl">
             PROJECTS
             <p className="text-xl text-center font-semibold justify-center flex text-black">
               *demo account details provided in project login pages*
@@ -323,10 +321,10 @@ export default function Home() {
         </div>
       </div>
       <div id="about" className="min-h-screen items-center justify-center flex">
-        <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-center lg:text-start lg:pl-24 text-4xl">
+        <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-3xl sm:text-center lg:text-start lg:pl-24 text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
-            Born in Hong Kong. <b>Grew up in 3 countries</b> and currently in
+            Born in Japan. <b>Grew up in 3 countries</b> and currently in
             Australia looking to become a Web Developer.
           </p>
           <p>
@@ -346,7 +344,7 @@ export default function Home() {
       </div>
       <div className="grid overflow-x-auto bg-gradient-to-r from-cyan-600 to-blue-500 ">
         <div className="pointer-events-none text-white font-poppins py-16 px-12 text-4xl">
-          <h1 className="font-bold text-center">MY SKILLS</h1>
+          <h1 className="font-bold text-start pl-10">MY SKILLS</h1>
           <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center pt-16 px-10 text-6xl">
             <div className="flex gap-2 items-center flex-col">
               <FaSquareGithub className="" />
