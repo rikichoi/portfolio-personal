@@ -323,7 +323,7 @@ export default function Home() {
         </div>
       </div>
       <div id="about" className="min-h-screen items-center justify-center flex">
-        <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-center lg:pl-24 text-4xl">
+        <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-center lg:text-start lg:pl-24 text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
             Born in Hong Kong. <b>Grew up in 3 countries</b> and back in
