@@ -22,7 +22,7 @@ import { Tooltip } from "@nextui-org/tooltip";
 export default function Home() {
   return (
     <div className="bg-gray-50">
-      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 px-44  min-h-20 bg-white border-b-2">
+      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-12 md:px-44  min-h-20 bg-white border-b-2">
         <div className="flex justify-center items-center">
           <Image src={Logo} alt="my logo" className="max-w-44"></Image>
         </div>
@@ -38,50 +38,45 @@ export default function Home() {
       <div className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex"></div>
 
-        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] ">
-          <div className="grid gap-3">
-            <div className="font-inter flex flex-row font-bold text-6xl">
+          <div className="xs:grid grid gap-3">
+            <div className="xs:flex-col sm:flex-col font-inter flex xl:flex-row font-bold text-6xl">
               <h1 className="w-full">RIKI CHOI</h1>
-              <div className="w-full gap-10 text-4xl flex justify-center text-center items-center flex-row">
+              <div className=" sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex xl:justify-center text-center items-center flex-row">
                 <Tooltip showArrow={true} content="Download CV PDF">
                   <a
                     href="/files/Riki-Choi-Resume.pdf"
                     alt="Riki Choi Resume"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex hover:text-red-600 items-center flex-row"
+                    className="flex hover:text-red-600"
                   >
                     <FaDownload className="text-3xl" />
-                    <p className="ml-2 text-base"></p>
                   </a>
                 </Tooltip>
                 <Tooltip showArrow={true} content="GitHub">
                   <a
                     href="https://github.com/rikichoi"
                     target="_blank"
-                    className="flex hover:text-red-600 items-center flex-row"
+                    className="flex hover:text-red-600"
                   >
                     <FaGithub />
-                    <p className="ml-2 text-base"></p>
                   </a>
                 </Tooltip>
                 <Tooltip showArrow={true} content="LinkedIn">
                   <a
                     href="https://www.linkedin.com/in/rikichoi/"
                     target="_blank"
-                    className="flex hover:text-red-600 items-center flex-row"
+                    className="flex hover:text-red-600"
                   >
                     <FaLinkedin />
-                    <p className="ml-2 text-base"></p>
                   </a>
                 </Tooltip>
                 <Tooltip showArrow={true} content="Email">
                   <a
                     href="mailto:choi.riki@gmail.com"
-                    className="flex hover:text-red-600 items-center flex-row"
+                    className="flex hover:text-red-600"
                   >
                     <MdOutlineEmail />
-                    <p className="ml-2 text-base"></p>
                   </a>
                 </Tooltip>
               </div>
@@ -104,12 +99,12 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
+
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
       </div>
       <div className="grid grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <p className="pointer-events-none col-span-2 text-white font-poppins py-16 pl-24 text-4xl">
+        <p className="pointer-events-none col-span-2 text-white font-poppins py-16 sm:pl-12 lg:pl-24 text-4xl">
           I am an <b>enthusiastic developer</b> with a passion for creating{" "}
           <b>solutions for complex problems.</b>
         </p>
@@ -143,7 +138,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="px-10 row-span-2 gap-5 grid grid-cols-5">
+        <div className="px-10 row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
             <div className="font-poppins flex flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
@@ -240,8 +235,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="px-10 row-span-2 gap-5 grid grid-cols-5  ">
-          <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center">
+        <div className="px-10 row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/portfolio-app.png')]  bg-cover bg-center">
             <div className="font-poppins flex flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
@@ -328,7 +323,7 @@ export default function Home() {
         </div>
       </div>
       <div id="about" className="min-h-screen items-center justify-center flex">
-        <div className="pointer-events-none space-y-14 text-black font-poppins py-16 pl-24 text-4xl">
+        <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-center lg:pl-24 text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
             Born in Hong Kong. <b>Grew up in 3 countries</b> and back in
@@ -419,7 +414,6 @@ export default function Home() {
               className="flex hover:text-red-600 items-center flex-row"
             >
               <FaDownload className="text-3xl" />
-              <p className="ml-2 text-base">- Resume</p>
             </a>
             <a
               href="https://github.com/rikichoi"
@@ -427,7 +421,6 @@ export default function Home() {
               className="flex hover:text-red-600 items-center flex-row"
             >
               <FaGithub />
-              <p className="ml-2 text-base">- GitHub</p>
             </a>
             <a
               href="https://www.linkedin.com/in/rikichoi/"
@@ -435,14 +428,12 @@ export default function Home() {
               className="flex hover:text-red-600 items-center flex-row"
             >
               <FaLinkedin />
-              <p className="ml-2 text-base">- LinkedIn</p>
             </a>
             <a
               href="mailto:choi.riki@gmail.com"
               className="flex hover:text-red-600 items-center flex-row"
             >
               <MdOutlineEmail />
-              <p className="ml-2 text-base">- Email - choi.riki@gmail.com</p>
             </a>
           </div>
           <form
@@ -450,7 +441,7 @@ export default function Home() {
             method="POST"
           >
             <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
-              <div className="grid gap-5 w-full grid-cols-2">
+              <div className="grid gap-5 w-full sm:grid-cols-1 lg:grid-cols-2">
                 <div className="grid grid-rows-3 w-full  gap-3">
                   <input
                     name="name"
