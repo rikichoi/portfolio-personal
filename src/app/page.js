@@ -37,10 +37,10 @@ export default function Home() {
       </div>
       <div className="flex min-h-screen flex-col items-center justify-between p-24">
         <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex"></div>
-        <div className="xs:h-full w-full h-full grid gap-3">
-          <div className="xs:flex-col sm:flex-col font-inter flex xl:flex-row font-bold text-6xl">
+        <div className="xs:h-full h-full grid gap-3">
+          <div className="xs:flex-col sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
             <h1 className="w-full">RIKI CHOI</h1>
-            <div className=" sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex xl:justify-center text-center items-center flex-row">
+            <div className=" sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
               <Tooltip showArrow={true} content="Download CV PDF">
                 <a
                   href="/files/Riki-Choi-Resume.pdf"
