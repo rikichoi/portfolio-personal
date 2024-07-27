@@ -35,12 +35,12 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="flex min-h-screen flex-col items-center justify-between p-24">
-        <div className="z-10 max-w-6xl w-full items-center justify-between font-mono text-sm lg:flex"></div>
+      <div className="flex min-h-screen w-full flex-col items-center justify-between px-8 p-24">
+        <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex"></div>
         <div className="xs:h-full h-full grid gap-3">
-          <div className="xs:flex-col sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
+          <div className="xs:flex-col w-full sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
             <h1 className="w-full">RIKI CHOI</h1>
-            <div className=" sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
+            <div className="sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
               <Tooltip showArrow={true} content="Download CV PDF">
                 <a
                   href="/files/Riki-Choi-Resume.pdf"
@@ -117,7 +117,7 @@ export default function Home() {
       </div>
       <div
         id="projects"
-        className="scroll-mt-16 grid gap-5 min-h-screen grid-rows-5 bg-zinc-50 "
+        className="scroll-mt-16 grid gap-5 min-h-screen sm:grid-rows-7 lg:grid-rows-5 bg-zinc-50 "
       >
         <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-zinc-50 ">
           <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900 font-poppins py-16 sm:px-2 lg:px-12 text-4xl">
@@ -136,7 +136,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="px-10 row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+        <div className="px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
             <div className="font-poppins flex flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
@@ -157,7 +157,7 @@ export default function Home() {
                   <p className="text-3xl">Tailwind CSS</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 flex ml-auto items-center justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex ml-auto items-center justify-end">
                 <a
                   href="https://calorie-tracker-app-one.vercel.app/"
                   target="_blank"
@@ -233,7 +233,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="px-10 row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+        <div className="px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/portfolio-app.png')]  bg-cover bg-center">
             <div className="font-poppins flex flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
@@ -290,7 +290,7 @@ export default function Home() {
                   <p className="text-3xl">SQL</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 flex ml-auto items-center justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex ml-auto items-center justify-end">
                 <a
                   href="https://youtu.be/EqkZ8--z3ag"
                   target="_blank"
