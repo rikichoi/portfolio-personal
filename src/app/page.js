@@ -345,7 +345,7 @@ export default function Home() {
             Expecting to graduate this year.
           </p>
           <p>
-            When im not programming you might find me <b>playing soccer,</b>{" "}
+            When I&apos;m not programming you might find me <b>playing soccer,</b>{" "}
             <b>watching movies</b> or{" "}
             <b>grinding competitive FPS shooters & fighting games.</b>
           </p>
