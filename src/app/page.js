@@ -24,22 +24,10 @@ import { useRef } from "react";
 import sendEmail from "./actions/sendEmail";
 
 export default function Home() {
-  const resendKey = new Resend("re_18a7mF2A_DSxy9B21H6VqXRVAtceeMN24");
   const nameRef = useRef();
   const emailRef = useRef();
   const subjectRef = useRef();
   const messageRef = useRef();
-
-  //   const sendEmail = async () => {
-
-  //     const { data, error } = await resendKey.emails.send({
-  //     from: "onboarding@resend.dev",
-  //     to: "delivered@resend.dev",
-  //     subject: "Tester",
-  //     text: "Yeah we testing!",
-  //   });
-
-  // };
 
   return (
     <div className="bg-gray-50">
