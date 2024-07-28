@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
@@ -18,8 +19,28 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { Tooltip } from "@nextui-org/tooltip";
+import { Resend } from "resend";
+import { useRef } from "react";
+import sendEmail from "./actions/sendEmail";
 
 export default function Home() {
+  const resendKey = new Resend("re_18a7mF2A_DSxy9B21H6VqXRVAtceeMN24");
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const subjectRef = useRef();
+  const messageRef = useRef();
+
+  //   const sendEmail = async () => {
+
+  //     const { data, error } = await resendKey.emails.send({
+  //     from: "onboarding@resend.dev",
+  //     to: "delivered@resend.dev",
+  //     subject: "Tester",
+  //     text: "Yeah we testing!",
+  //   });
+
+  // };
+
   return (
     <div className="bg-gray-50">
       <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-12 lg:px-44 min-h-20 bg-white border-b-2">
@@ -434,32 +455,29 @@ export default function Home() {
               <MdOutlineEmail />
             </a>
           </div>
-          <form
-            action="https://formsubmit.co/choi.riki@gmail.com"
-            method="POST"
-          >
+          <form action={()=>sendEmail(nameRef.current.value, emailRef.current.value, subjectRef.current.value,messageRef.current.value)}>
             <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
               <div className="grid gap-5 w-full sm:grid-cols-1 lg:grid-cols-2">
                 <div className="grid grid-rows-3 w-full  gap-3">
                   <input
-                    name="name"
+                    ref={nameRef}
                     placeholder="Name"
                     className="w-full text-xl bg-zinc-700 py-2 px-2 "
                   ></input>
                   <input
-                    name="email"
+                    ref={emailRef}
                     placeholder="Email"
                     className="w-full text-xl bg-zinc-700 py-2 px-2"
                   ></input>
                   <input
-                    name="subject"
+                    ref={subjectRef}
                     placeholder="Subject"
                     className="w-full text-xl bg-zinc-700 py-2 px-2"
                   ></input>
                 </div>
                 <div className="grid w-full h-full gap-5">
                   <textarea
-                    name="message"
+                    ref={messageRef}
                     placeholder="Message"
                     className="w-full h-full text-xl bg-zinc-700 py-2 px-2 "
                   ></textarea>
