@@ -33,7 +33,11 @@ export default function Home() {
     <div className="bg-gray-50">
       <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
         <div className="flex justify-center items-center">
-          <Image src={Logo} alt="my logo" className="sm:max-w-24 lg:max-w-44 flex-shrink flex"></Image>
+          <Image
+            src={Logo}
+            alt="my logo"
+            className="sm:max-w-24 lg:max-w-44 flex-shrink flex"
+          ></Image>
         </div>
         <div className="flex justify-center items-center">
           <a
@@ -95,13 +99,13 @@ export default function Home() {
           <div className="flex z-40 flex-row gap-10">
             <a
               href="#about"
-              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
+              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               ABOUT ME
             </a>
             <a
               href="#projects"
-              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full text-xl"
+              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               PROJECTS
             </a>
@@ -118,7 +122,7 @@ export default function Home() {
         <div className="items-center flex justify-center">
           <a
             href=""
-            className="bg-zinc-50 hover:bg-zinc-900 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full text-xl"
+            className="bg-zinc-50 hover:bg-zinc-900 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
           >
             RESUME
           </a>
@@ -139,7 +143,7 @@ export default function Home() {
             <a
               href="https://github.com/rikichoi"
               target="_blank"
-              className="bg-gray-950 hover:bg-cyan-600 transition-all duration-500 font-bold py-5 text-white text-center max-w-40 w-full text-xl"
+              className="bg-gray-950 hover:bg-cyan-600 transition-all duration-500 font-bold py-5 text-white text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               GITHUB
             </a>
@@ -149,41 +153,41 @@ export default function Home() {
           <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
             <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
-                <div className="flex flex-row">
+                <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
-                  <p className="text-3xl">React</p>
+                  <p className="sm:text-xl lg:text-3xl">React</p>
                 </div>
                 <div className="flex flex-row">
                   <RiNextjsFill className="mr-3" />
-                  <p className="text-3xl">NextJS</p>
+                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
                 </div>
                 <div className="flex flex-row">
                   <IoLogoFirebase className="mr-3" />
-                  <p className="text-3xl">FireBase</p>
+                  <p className=" sm:text-xl lg:text-3xl">FireBase</p>
                 </div>
                 <div className="flex flex-row">
                   <RiTailwindCssFill className="mr-3" />
-                  <p className="text-3xl">Tailwind CSS</p>
+                  <p className="sm:text-xl lg:text-3xl">Tailwind CSS</p>
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
                 <a
                   href="https://calorie-tracker-app-one.vercel.app/"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   LIVE DEMO
                 </a>
                 <a
                   href="https://github.com/rikichoi/calorie-tracking-app"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex text-white h-full w-full justify-end px-10 py-12 flex-col">
+            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="text-4xl font-poppins font-semibold w-full">
                 HEALTH DIARY
               </h1>
@@ -195,43 +199,43 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center">
-          <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
-                  <p className="text-3xl">React</p>
+                  <p className="sm:text-xl lg:text-3xl">React</p>
                 </div>
                 <div className="flex flex-row">
                   <RiNextjsFill className="mr-3" />
-                  <p className="text-3xl">NextJS</p>
+                  <p className="sm:text-xl lg:text-3xl">NextJS</p>
                 </div>
                 <div className="flex flex-row">
                   <IoLogoFirebase className="mr-3" />
-                  <p className="text-3xl">FireBase</p>
+                  <p className="sm:text-xl lg:text-3xl">FireBase</p>
                 </div>
                 <div className="flex flex-row">
                   <RiTailwindCssFill className="mr-3" />
-                  <p className="text-3xl">Tailwind CSS</p>
+                  <p className="sm:text-xl lg:text-3xl">Tailwind CSS</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col lg:flex-col flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
                 <a
                   href="https://openhouse-listing-app.vercel.app/"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   LIVE DEMO
                 </a>
                 <a
                   href="https://github.com/rikichoi/openhouse-listing-app"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex h-full w-full text-white justify-end px-10 py-12 flex-col">
+            <div className="flex h-full w-full text-white justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="text-4xl font-poppins font-semibold w-full">
                 OPEN HOUSE
               </h1>
@@ -244,32 +248,32 @@ export default function Home() {
         </div>
         <div className="sm:px-2 lg:px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/portfolio-app.png')]  bg-cover bg-center">
-          <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
-          <div className="text-white space-y-3">
+            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+              <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
-                  <p className="text-3xl">React</p>
+                  <p className="sm:text-xl lg:text-3xl">React</p>
                 </div>
                 <div className="flex flex-row">
                   <RiNextjsFill className="mr-3" />
-                  <p className="text-3xl">NextJS</p>
+                  <p className="sm:text-xl lg:text-3xl">NextJS</p>
                 </div>
                 <div className="flex flex-row">
                   <RiTailwindCssFill className="mr-3" />
-                  <p className="text-3xl">Tailwind CSS</p>
+                  <p className="sm:text-xl lg:text-3xl">Tailwind CSS</p>
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
                 <a
                   href="https://github.com/rikichoi/portfolio-personal"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex h-full w-full text-white justify-end px-10 py-12 flex-col">
+            <div className="flex h-full w-full text-white justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="text-4xl font-poppins font-semibold  w-full">
                 THIS WEBSITE!
               </h1>
@@ -280,43 +284,43 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
-          <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
-                  <p className="text-3xl">React</p>
+                  <p className="sm:text-xl lg:text-3xl">React</p>
                 </div>
                 <div className="flex flex-row">
                   <FaAws className="mr-3" />
-                  <p className="text-3xl">AWS RDS</p>
+                  <p className="sm:text-xl lg:text-3xl">AWS RDS</p>
                 </div>
                 <div className="flex flex-row">
                   <DiDotnet className="mr-3" />
-                  <p className="text-3xl">.NET API</p>
+                  <p className="sm:text-xl lg:text-3xl">.NET API</p>
                 </div>
                 <div className="flex flex-row">
                   <BsFiletypeSql className="mr-3" />
-                  <p className="text-3xl">SQL</p>
+                  <p className="sm:text-xl lg:text-3xl">SQL</p>
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
                 <a
                   href="https://youtu.be/EqkZ8--z3ag"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIDEO
                 </a>
                 <a
                   href="https://github.com/dan933/2022-NBA-Prediction-Application"
                   target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-lg"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex text-white h-full w-full justify-end px-10 py-12 flex-col">
+            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="text-4xl font-poppins font-semibold w-full">
                 NBA PREDICTION APP
               </h1>
@@ -345,8 +349,8 @@ export default function Home() {
             Expecting to graduate this year.
           </p>
           <p>
-            When I&apos;m not programming you might find me <b>playing soccer,</b>{" "}
-            <b>watching movies</b> or{" "}
+            When I&apos;m not programming you might find me{" "}
+            <b>playing soccer,</b> <b>watching movies</b> or{" "}
             <b>grinding competitive FPS shooters & fighting games.</b>
           </p>
         </div>
@@ -406,9 +410,9 @@ export default function Home() {
         id="contact"
         className="grid items-center min-h-screen text-white bg-zinc-900"
       >
-        <div className="w-full font-poppins py-16 sm:px-2 lg:px-24 text-4xl">
+        <div className="w-full font-poppins py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
           <h1 className="font-bold">CONTACT</h1>
-          <p className="text-2xl">
+          <p className="sm:text-lg lg:text-2xl">
             I&apos;d love to hear from you! Let&apos;s connect via email or
             LinkedIn
           </p>
@@ -443,7 +447,16 @@ export default function Home() {
               <MdOutlineEmail />
             </a>
           </div>
-          <form action={()=>sendEmail(nameRef.current.value, emailRef.current.value, subjectRef.current.value,messageRef.current.value)}>
+          <form
+            action={() =>
+              sendEmail(
+                nameRef.current.value,
+                emailRef.current.value,
+                subjectRef.current.value,
+                messageRef.current.value
+              )
+            }
+          >
             <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
               <div className="grid gap-5 w-full sm:grid-cols-1 lg:grid-cols-2">
                 <div className="grid grid-rows-3 w-full  gap-3">
