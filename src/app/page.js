@@ -31,14 +31,14 @@ export default function Home() {
 
   return (
     <div className="bg-gray-50">
-      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-12 lg:px-44 min-h-20 bg-white border-b-2">
+      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
         <div className="flex justify-center items-center">
-          <Image src={Logo} alt="my logo" className="max-w-44"></Image>
+          <Image src={Logo} alt="my logo" className="sm:max-w-24 lg:max-w-44 flex-shrink flex"></Image>
         </div>
         <div className="flex justify-center items-center">
           <a
             href="#contact"
-            className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-4 px-3 text-center max-w-40 w-full text-xl"
+            className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 sm:py-2 lg:py-4 sm:px-2 lg:px-3 text-center max-w-40 w-full sm:text-sm lg:text-xl"
           >
             CONTACT ME
           </a>
