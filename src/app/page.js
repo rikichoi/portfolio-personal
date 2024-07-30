@@ -30,7 +30,7 @@ export default function Home() {
   const messageRef = useRef();
 
   return (
-    <div className="bg-gray-50">
+    <main className="bg-gray-50">
       <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
         <div className="flex justify-center items-center">
           <Image
@@ -332,13 +332,50 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="lg:px-10 sm:px-2 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/techbyte-app.png')]  bg-cover bg-center">
+            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+              <div className="text-white space-y-3">
+                <div className="flex flex-row items-center">
+                  <FaReact className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">React</p>
+                </div>
+                <div className="flex flex-row">
+                  <RiNextjsFill className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
+                </div>
+                <div className="flex flex-row">
+                  <IoLogoFirebase className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
+                </div>
+              </div>
+              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+                <h3 className="text-white">Coming Soon!</h3>
+                <a
+                  href="https://github.com/rikichoi/techbyte-app"
+                  target="_blank"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                >
+                  VIEW GITHUB
+                </a>
+              </div>
+            </div>
+            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="text-4xl font-poppins font-semibold w-full">
+                TechByte E-Commerce Store
+              </h1>
+              <p className="font-poppins">
+                Tech product based e-commerce store for all your tech needs!
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <div id="about" className="min-h-screen items-center justify-center flex">
         <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
-            Born in Japan. <b>Grew up in 3 countries</b> and currently in
-            Australia looking to become a Web Developer.
+            Born in Japan. <b>Grew up in 3 countries</b> and currently looking to become a Web Developer.
           </p>
           <p>
             Currently studying a{" "}
@@ -496,6 +533,6 @@ export default function Home() {
           </form>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
