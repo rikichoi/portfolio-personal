@@ -121,7 +121,10 @@ export default function Home() {
         </p>
         <div className="items-center flex justify-center">
           <a
-            href=""
+            href="/files/Riki-Choi-Resume.pdf"
+            alt="Riki Choi Resume"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-zinc-50 hover:bg-zinc-900 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
           >
             RESUME
@@ -375,7 +378,8 @@ export default function Home() {
         <div className="pointer-events-none space-y-14 text-black font-poppins py-16 sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
-            Born in Japan. <b>Grew up in 3 countries</b> and currently looking to become a Web Developer.
+            Born in Japan. <b>Grew up in 3 countries</b> and currently looking
+            to become a Web Developer.
           </p>
           <p>
             Currently studying a{" "}
