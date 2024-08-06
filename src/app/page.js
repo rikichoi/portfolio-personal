@@ -20,14 +20,49 @@ import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { Tooltip } from "@nextui-org/tooltip";
 import { Resend } from "resend";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import sendEmail from "./actions/sendEmail";
+import { toast } from "react-toastify";
 
 export default function Home() {
+  const [errors, setErrors] = useState({});
   const nameRef = useRef();
   const emailRef = useRef();
   const subjectRef = useRef();
   const messageRef = useRef();
+
+  const validate = () => {
+    let errors = {};
+    if (!nameRef.current.value) {
+      errors.name = "Please enter a name";
+    }
+    if (
+      !emailRef.current.value ||
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(emailRef.current.value)
+    ) {
+      errors.email = "Please enter a valid email";
+    }
+    if (!subjectRef.current.value) {
+      errors.subject = "Please enter a subject";
+    }
+    if (!messageRef.current.value) {
+      errors.message = "Please enter a message";
+    }
+    return errors;
+  };
+
+  const submitHandler = () => {
+    let errors = validate();
+    if (Object.keys(errors).length) return setErrors(errors);
+    sendEmail(
+      nameRef.current.value,
+      emailRef.current.value,
+      subjectRef.current.value,
+      messageRef.current.value
+    );
+    setErrors({});
+    toast.success("Email sent successfully!");
+  };
 
   return (
     <main className="bg-gray-50">
@@ -488,41 +523,60 @@ export default function Home() {
               <MdOutlineEmail />
             </a>
           </div>
-          <form
-            action={() =>
-              sendEmail(
-                nameRef.current.value,
-                emailRef.current.value,
-                subjectRef.current.value,
-                messageRef.current.value
-              )
-            }
-          >
+          <form action={() => submitHandler()}>
             <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
               <div className="grid gap-5 w-full sm:grid-cols-1 lg:grid-cols-2">
                 <div className="grid grid-rows-3 w-full  gap-3">
-                  <input
-                    ref={nameRef}
-                    placeholder="Name"
-                    className="w-full text-xl bg-zinc-700 py-2 px-2 "
-                  ></input>
-                  <input
-                    ref={emailRef}
-                    placeholder="Email"
-                    className="w-full text-xl bg-zinc-700 py-2 px-2"
-                  ></input>
-                  <input
-                    ref={subjectRef}
-                    placeholder="Subject"
-                    className="w-full text-xl bg-zinc-700 py-2 px-2"
-                  ></input>
+                  <div>
+                    <input
+                      ref={nameRef}
+                      placeholder="Name"
+                      className="w-full text-xl bg-zinc-700 py-2 px-2 "
+                    ></input>
+                    {errors.name ? (
+                      <p className="text-base text-red-600">{errors.name}</p>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  <div>
+                    <input
+                      ref={emailRef}
+                      placeholder="Email"
+                      className="w-full text-xl bg-zinc-700 py-2 px-2"
+                    ></input>
+                    {errors.email ? (
+                      <p className="text-base text-red-600">{errors.email}</p>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                  <div>
+                    <input
+                      ref={subjectRef}
+                      placeholder="Subject"
+                      className="w-full text-xl bg-zinc-700 py-2 px-2"
+                    ></input>
+                    {errors.subject ? (
+                      <p className="text-base text-red-600">{errors.subject}</p>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 </div>
                 <div className="grid w-full h-full gap-5">
-                  <textarea
-                    ref={messageRef}
-                    placeholder="Message"
-                    className="w-full h-full text-xl bg-zinc-700 py-2 px-2 "
-                  ></textarea>
+                  <div>
+                    <textarea
+                      ref={messageRef}
+                      placeholder="Message"
+                      className="w-full h-full text-xl bg-zinc-700 py-2 px-2 "
+                    ></textarea>
+                    {errors.message ? (
+                      <p className="text-base text-red-600">{errors.message}</p>
+                    ) : (
+                      ""
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
