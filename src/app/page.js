@@ -23,6 +23,7 @@ import { Resend } from "resend";
 import { useRef, useState } from "react";
 import sendEmail from "./actions/sendEmail";
 import { toast } from "react-toastify";
+import { BsStripe } from "react-icons/bs";
 
 export default function Home() {
   const [errors, setErrors] = useState({});
@@ -65,7 +66,7 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-gray-50">
+    <main className="bg-gray-50 font-poppins">
       <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
         <div className="flex justify-center items-center">
           <Image
@@ -285,7 +286,104 @@ export default function Home() {
           </div>
         </div>
         <div className="sm:px-2 lg:px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/portfolio-app.png')]  bg-cover bg-center">
+          <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
+            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+              <div className="text-white space-y-3">
+                <div className="flex flex-row">
+                  <FaReact className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">React</p>
+                </div>
+                <div className="flex flex-row">
+                  <FaAws className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">AWS RDS</p>
+                </div>
+                <div className="flex flex-row">
+                  <DiDotnet className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">.NET API</p>
+                </div>
+                <div className="flex flex-row">
+                  <BsFiletypeSql className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">SQL</p>
+                </div>
+              </div>
+              <div className="w-1/2 gap-10 sm:flex-col lg:flex-col flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+
+                <a
+                  href="https://youtu.be/EqkZ8--z3ag"
+                  target="_blank"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                >
+                  VIDEO
+                </a>
+                <a
+                  href="https://github.com/dan933/2022-NBA-Prediction-Application"
+                  target="_blank"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                >
+                  VIEW GITHUB
+                </a>
+              </div>
+            </div>
+            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="text-4xl font-poppins font-semibold w-full">
+                NBA PREDICTION APP
+              </h1>
+              <p className="font-poppins">
+                A side project that was developed along side a handful of
+                friends. This app assists in sports betting by predicting the
+                odds of NBA teams...
+              </p>
+            </div>
+          </div>
+          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/techbyte-app.png')]  bg-cover bg-center">
+            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+              <div className="text-white space-y-3">
+                <div className="flex flex-row items-center">
+                  <FaReact className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">React</p>
+                </div>
+                <div className="flex flex-row">
+                  <RiNextjsFill className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
+                </div>
+                <div className="flex flex-row">
+                  <IoLogoFirebase className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
+                </div>
+                <div className="flex flex-row">
+                  <BsStripe className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">Stripe</p>
+                </div>
+              </div>
+              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+                <a
+                  href="https://techbyte-store.vercel.app/"
+                  target="_blank"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                >
+                  LIVE DEMO
+                </a>
+                <a
+                  href="https://github.com/rikichoi/techbyte-store"
+                  target="_blank"
+                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                >
+                  VIEW GITHUB
+                </a>
+              </div>
+            </div>
+            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="text-4xl font-poppins font-semibold w-full">
+                TechByte E-Commerce Store
+              </h1>
+              <p className="font-poppins">
+                Tech product based e-commerce store for all your tech needs!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="lg:px-10 sm:px-2 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/portfolio-app.png')]  bg-cover bg-center">
             <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
@@ -318,92 +416,6 @@ export default function Home() {
               <p className="font-poppins">
                 This Website was made from scratch using NextJS and Tailwind
                 CSS, for convenience it is hosted on Vercel...
-              </p>
-            </div>
-          </div>
-          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <FaAws className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">AWS RDS</p>
-                </div>
-                <div className="flex flex-row">
-                  <DiDotnet className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">.NET API</p>
-                </div>
-                <div className="flex flex-row">
-                  <BsFiletypeSql className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">SQL</p>
-                </div>
-              </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
-                <a
-                  href="https://youtu.be/EqkZ8--z3ag"
-                  target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
-                >
-                  VIDEO
-                </a>
-                <a
-                  href="https://github.com/dan933/2022-NBA-Prediction-Application"
-                  target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
-                >
-                  VIEW GITHUB
-                </a>
-              </div>
-            </div>
-            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold w-full">
-                NBA PREDICTION APP
-              </h1>
-              <p className="font-poppins">
-                A side project that was developed along side a handful of
-                friends. This app assists in sports betting by predicting the
-                odds of NBA teams...
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="lg:px-10 sm:px-2 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/techbyte-app.png')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row items-center">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiNextjsFill className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
-                </div>
-                <div className="flex flex-row">
-                  <IoLogoFirebase className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
-                </div>
-              </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
-                <h3 className="text-white">Coming Soon!</h3>
-                <a
-                  href="https://github.com/rikichoi/techbyte-app"
-                  target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
-                >
-                  VIEW GITHUB
-                </a>
-              </div>
-            </div>
-            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold w-full">
-                TechByte E-Commerce Store
-              </h1>
-              <p className="font-poppins">
-                Tech product based e-commerce store for all your tech needs!
               </p>
             </div>
           </div>
