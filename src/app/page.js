@@ -382,44 +382,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="lg:px-10 sm:px-2 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/portfolio-app.png')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiNextjsFill className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">NextJS</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiTailwindCssFill className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">Tailwind CSS</p>
-                </div>
-              </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
-                <a
-                  href="https://github.com/rikichoi/portfolio-personal"
-                  target="_blank"
-                  className="bg-zinc-800 hover:bg-zinc-700 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
-                >
-                  VIEW GITHUB
-                </a>
-              </div>
-            </div>
-            <div className="flex h-full w-full text-white justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold  w-full">
-                THIS WEBSITE!
-              </h1>
-              <p className="font-poppins">
-                This Website was made from scratch using NextJS and Tailwind
-                CSS, for convenience it is hosted on Vercel...
-              </p>
-            </div>
-          </div>
-        </div>
+
       </div>
       <div id="about" className="min-h-screen items-center justify-center flex">
         <div className="pointer-events-none space-y-20 text-black font-poppins sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
