@@ -66,7 +66,7 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-gray-50 font-poppins">
+    <main className="bg-gray-50 ">
       <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
         <div className="flex justify-center items-center">
           <Image
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
       </div>
       <div className="grid sm:pb-10 sm:grid-cols-1 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <p className="pointer-events-none col-span-2 text-white font-poppins py-16 sm:text-center sm:px-2 lg:pl-24 text-4xl">
+        <p className="pointer-events-none col-span-2 text-white  py-16 sm:text-center sm:px-2 lg:pl-24 text-4xl">
           I am an <b>enthusiastic developer</b> with a passion for creating{" "}
           <b>solutions for complex problems.</b>
         </p>
@@ -172,7 +172,7 @@ export default function Home() {
         className="scroll-mt-16 grid gap-5 min-h-screen sm:grid-rows-7 lg:grid-rows-5 bg-zinc-50 "
       >
         <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-zinc-50 ">
-          <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900 font-poppins py-16 sm:px-2 lg:px-12 text-4xl">
+          <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900  py-16 sm:px-2 lg:px-12 text-4xl">
             PROJECTS
             <p className="text-xl text-center font-semibold justify-center flex text-black">
               *demo account details provided in project login pages*
@@ -190,7 +190,7 @@ export default function Home() {
         </div>
         <div className="lg:px-10 sm:px-2 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -227,10 +227,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold w-full">
+              <h1 className="text-4xl  font-semibold w-full">
                 HEALTH DIARY
               </h1>
-              <p className="font-poppins">
+              <p className="">
                 HealthDiary is a service that provides access to a dynamic
                 calorie tracking application, with the goal of assisting users
                 of any type to stay on top of their health and nutrition...
@@ -238,7 +238,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
@@ -275,10 +275,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex h-full w-full text-white justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold w-full">
+              <h1 className="text-4xl  font-semibold w-full">
                 OPEN HOUSE
               </h1>
-              <p className="font-poppins">
+              <p className="">
                 OpenHouse is a platform that streamlines the management and
                 advertisement process of open house listings...
               </p>
@@ -287,7 +287,7 @@ export default function Home() {
         </div>
         <div className="sm:px-2 lg:px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
@@ -325,10 +325,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold w-full">
+              <h1 className="text-4xl  font-semibold w-full">
                 NBA PREDICTION APP
               </h1>
-              <p className="font-poppins">
+              <p className="">
                 A side project that was developed along side a handful of
                 friends. This app assists in sports betting by predicting the
                 odds of NBA teams...
@@ -336,7 +336,7 @@ export default function Home() {
             </div>
           </div>
           <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/techbyte-app.png')]  bg-cover bg-center">
-            <div className="font-poppins sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -373,10 +373,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl font-poppins font-semibold w-full">
+              <h1 className="text-4xl  font-semibold w-full">
                 TechByte E-Commerce Store
               </h1>
-              <p className="font-poppins">
+              <p className="">
                 Tech product based e-commerce store for all your tech needs!
               </p>
             </div>
@@ -385,7 +385,7 @@ export default function Home() {
 
       </div>
       <div id="about" className="min-h-screen items-center justify-center flex">
-        <div className="pointer-events-none space-y-20 text-black font-poppins sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
+        <div className="pointer-events-none space-y-20 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
             Born in Japan. <b>Grew up in 3 countries</b> and currently looking
@@ -407,9 +407,9 @@ export default function Home() {
         </div>
       </div>
       <div className="grid overflow-x-auto bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <div className="pointer-events-none text-white font-poppins py-16 px-12 text-4xl">
+        <div className="pointer-events-none text-white  py-16 px-12 text-4xl">
           <h1 className="font-bold text-start pl-10">MY SKILLS</h1>
-          <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center pt-16 px-10 text-6xl">
+          <div className=" font-bold gap-10 flex flex-row items-center justify-center pt-16 px-10 text-6xl">
             <div className="flex gap-2 items-center flex-col">
               <FaSquareGithub className="" />
               <p className="text-2xl">GitHub</p>
@@ -461,7 +461,7 @@ export default function Home() {
         id="contact"
         className="grid items-center min-h-screen text-white bg-zinc-900"
       >
-        <div className="w-full font-poppins py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
+        <div className="w-full  py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
           <h1 className="font-bold">CONTACT</h1>
           <p className="sm:text-lg lg:text-2xl">
             I&apos;d love to hear from you! Let&apos;s connect via email or
@@ -499,7 +499,7 @@ export default function Home() {
             </a>
           </div>
           <form action={() => submitHandler()}>
-            <div className="font-poppins font-bold gap-10 flex flex-row items-center justify-center">
+            <div className=" font-bold gap-10 flex flex-row items-center justify-center">
               <div className="grid gap-5 w-full sm:grid-cols-1 lg:grid-cols-2">
                 <div className="grid grid-rows-3 w-full  gap-3">
                   <div>
