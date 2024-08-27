@@ -70,8 +70,9 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-gray-50 ">
-      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
+    <main className="bg-[#ffffff]">
+      <div class="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-[#ffffff] border-b-2">
         <div className="flex justify-center items-center">
           <Image
             src={Logo}
@@ -89,10 +90,10 @@ export default function Home() {
         </div>
       </div>
       <div className="flex min-h-screen w-full flex-col items-center justify-between px-8 p-24">
-        <div className="z-10 w-full items-center justify-between font-mono text-sm lg:flex"></div>
+        <div className="z-40 w-full items-center justify-between font-mono text-sm lg:flex"></div>
         <div className="xs:h-full h-full grid gap-3">
           <div className="xs:flex-col w-full sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
-            <h1 className="w-full">RIKI CHOI</h1>
+            <h1 className="w-full z-50 pointer-events-none">RIKI CHOI</h1>
             <div className="sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
               <Tooltip showArrow={true} content="Download CV PDF">
                 <a
@@ -133,7 +134,7 @@ export default function Home() {
               </Tooltip>
             </div>
           </div>
-          <h1 className="pointer-events-none font-inter font-semibold text-3xl">
+          <h1 className="z-50 pointer-events-none font-inter font-semibold text-3xl">
             FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
           </h1>
           <div className="flex z-40 flex-row gap-10">
@@ -173,9 +174,9 @@ export default function Home() {
       </div>
       <div
         id="projects"
-        className="scroll-mt-16 grid gap-5 min-h-screen sm:grid-rows-7 lg:grid-rows-5 bg-zinc-50 "
+        className="scroll-mt-16 grid gap-5 min-h-screen sm:grid-rows-7 bg-[#ffffff] "
       >
-        <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-zinc-50 ">
+        <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-[#ffffff] ">
           <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900  py-16 sm:px-2 lg:px-12 text-4xl">
             PROJECTS
             <p className="text-xl text-center font-semibold justify-center flex text-black">
@@ -192,9 +193,10 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="lg:px-10 sm:px-2 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
-            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+
+        <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
+            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -210,28 +212,28 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row">
                   <RiTailwindCssFill className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">Tailwind CSS</p>
+                  <p className="sm:text-xl lg:text-3xl">Tailwind</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
                 <a
                   href="https://calorie-tracker-app-one.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full sm:text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
-                  LIVE DEMO
+                  LIVE
                 </a>
                 <a
                   href="https://github.com/rikichoi/calorie-tracking-app"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
-                  VIEW GITHUB
+                  GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl  font-semibold w-full">HEALTH DIARY</h1>
+            <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">HealthDiary</h1>
               <p className="">
                 HealthDiary is a service that provides access to a dynamic
                 calorie tracking application, with the goal of assisting users
@@ -239,8 +241,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center">
-            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+
+          <div className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center">
+            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
@@ -256,28 +259,28 @@ export default function Home() {
                 </div>
                 <div className="flex flex-row">
                   <RiTailwindCssFill className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">Tailwind CSS</p>
+                  <p className="sm:text-xl lg:text-3xl">Tailwind</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-col flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
                 <a
                   href="https://openhouse-listing-app.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
-                  LIVE DEMO
+                  LIVE
                 </a>
                 <a
                   href="https://github.com/rikichoi/openhouse-listing-app"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
-                  VIEW GITHUB
+                  GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex h-full w-full text-white justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl  font-semibold w-full">OPEN HOUSE</h1>
+            <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">OpenHouse</h1>
               <p className="">
                 OpenHouse is a platform that streamlines the management and
                 advertisement process of open house listings...
@@ -285,56 +288,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="sm:px-2 lg:px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-2 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/seeker-app.png')]  bg-cover bg-center">
-            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row items-center">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiNextjsFill className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
-                </div>
-                <div className="flex flex-row">
-                  <IoLogoFirebase className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
-                </div>
-                <div className="flex flex-row">
-                  <SiPrisma className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">Prisma</p>
-                </div>
-              </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-col flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
-                <a
-                  href="https://seeker-board.vercel.app/"
-                  target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
-                >
-                  LIVE DEMO
-                </a>
-                <a
-                  href="https://github.com/rikichoi/seeker-app"
-                  target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
-                >
-                  VIEW GITHUB
-                </a>
-              </div>
-            </div>
-            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl  font-semibold w-full">
-                Seeker - Job Board Website
-              </h1>
-              <p className="">
-                A job search engine for jobs. Facilitates individual job
-                postings and company promotion.
-              </p>
-            </div>
-          </div>
-          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/techbyte-app.png')]  bg-cover bg-center">
-            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+
+        <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <div className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/techbyte-app.png')] bg-cover bg-center">
+            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -353,36 +310,80 @@ export default function Home() {
                   <p className=" sm:text-xl lg:text-3xl">Stripe</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
                 <a
                   href="https://techbyte-store.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
-                  LIVE DEMO
+                  LIVE
                 </a>
                 <a
                   href="https://github.com/rikichoi/techbyte-store"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
-                  VIEW GITHUB
+                  GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl  font-semibold w-full">
-                TechByte E-Commerce Store
-              </h1>
+            <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">TechByte</h1>
               <p className="">
                 Tech product based e-commerce store for all your tech needs!
               </p>
             </div>
           </div>
+          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/seeker-app.png')]  bg-cover bg-center">
+            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+              <div className="text-white space-y-3">
+                <div className="flex flex-row items-center">
+                  <FaReact className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">React</p>
+                </div>
+                <div className="flex flex-row">
+                  <RiNextjsFill className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
+                </div>
+                <div className="flex flex-row">
+                  <IoLogoFirebase className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
+                </div>
+                <div className="flex flex-row">
+                  <SiPrisma className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">Prisma</p>
+                </div>
+              </div>
+              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
+                <a
+                  href="https://seeker-board.vercel.app/"
+                  target="_blank"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
+                >
+                  LIVE
+                </a>
+                <a
+                  href="https://github.com/rikichoi/seeker-app"
+                  target="_blank"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
+                >
+                  GITHUB
+                </a>
+              </div>
+            </div>
+            <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">Seeker</h1>
+              <p className="">
+                A job search engine for jobs. Facilitates individual job
+                postings and company promotion.
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="sm:px-2 lg:px-10 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-3 flex flex-col hover:brightness-125 transition-all duration-500 bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
-            <div className=" sm:grid sm:grid-rows-2 lg:flex lg:flex-row pt-16 px-10 text-4xl">
+
+        <div className="lg:px-10 min-h-[50vh] sm:px-5 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
+            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -401,25 +402,25 @@ export default function Home() {
                   <p className=" sm:text-xl lg:text-3xl">SQL</p>
                 </div>
               </div>
-              <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
+              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
                 <a
                   href="https://youtu.be/EqkZ8--z3ag"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   VIDEO
                 </a>
                 <a
                   href="https://github.com/dan933/2022-NBA-Prediction-Application"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
-                  VIEW GITHUB
+                  GITHUB
                 </a>
               </div>
             </div>
-            <div className="flex text-white h-full w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="text-4xl  font-semibold w-full">
+            <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="sm:text-2xl lg:text-4xl font-semibold w-full">
                 NBA Prediction Application
               </h1>
               <p className="">
@@ -429,9 +430,13 @@ export default function Home() {
               </p>
             </div>
           </div>
+          
         </div>
       </div>
-      <div id="about" className="min-h-screen items-center justify-center flex">
+      <div
+        id="about"
+        className="min-h-screen items-center justify-center flex bg-[#ffffff]"
+      >
         <div className="pointer-events-none space-y-20 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
@@ -508,6 +513,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div
         id="contact"
         className="grid items-center min-h-screen text-white bg-zinc-900"
