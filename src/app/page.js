@@ -396,6 +396,10 @@ export default function Home() {
                   <FaAws className="mr-3" />
                   <p className=" sm:text-xl lg:text-3xl">AWS</p>
                 </div>
+                <div className="flex flex-row">
+                  <BsFiletypeSql className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">SQL</p>
+                </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
                 <a
