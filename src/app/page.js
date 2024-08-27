@@ -389,16 +389,12 @@ export default function Home() {
                   <p className="sm:text-xl lg:text-3xl">React</p>
                 </div>
                 <div className="flex flex-row">
-                  <RiNextjsFill className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
+                  <DiDotnet className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">.NET</p>
                 </div>
                 <div className="flex flex-row">
-                  <IoLogoFirebase className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
-                </div>
-                <div className="flex flex-row">
-                  <BsStripe className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">Stripe</p>
+                  <FaAws className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">AWS</p>
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col lg:flex-row flex lg:ml-auto sm:mx-auto items-center sm:justify-center lg:justify-end">
