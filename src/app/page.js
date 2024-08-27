@@ -165,7 +165,7 @@ export default function Home() {
             alt="Riki Choi Resume"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-zinc-50 hover:bg-zinc-900 hover:rounded-2xl hover:border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+            className="bg-zinc-50 hover:bg-zinc-900 hover:rounded-2xl hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
           >
             RESUME
           </a>
@@ -217,14 +217,14 @@ export default function Home() {
                 <a
                   href="https://calorie-tracker-app-one.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full sm:text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   LIVE DEMO
                 </a>
                 <a
                   href="https://github.com/rikichoi/calorie-tracking-app"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
@@ -263,14 +263,14 @@ export default function Home() {
                 <a
                   href="https://openhouse-listing-app.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   LIVE DEMO
                 </a>
                 <a
                   href="https://github.com/rikichoi/openhouse-listing-app"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
@@ -310,14 +310,14 @@ export default function Home() {
                 <a
                   href="https://seeker-board.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   LIVE DEMO
                 </a>
                 <a
                   href="https://github.com/rikichoi/seeker-app"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
@@ -357,14 +357,14 @@ export default function Home() {
                 <a
                   href="https://techbyte-store.vercel.app/"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   LIVE DEMO
                 </a>
                 <a
                   href="https://github.com/rikichoi/techbyte-store"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
@@ -405,14 +405,14 @@ export default function Home() {
                 <a
                   href="https://youtu.be/EqkZ8--z3ag"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIDEO
                 </a>
                 <a
                   href="https://github.com/dan933/2022-NBA-Prediction-Application"
                   target="_blank"
-                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-gray-300 hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center max-w-40 w-full text-sm lg:text-lg"
                 >
                   VIEW GITHUB
                 </a>
