@@ -28,6 +28,9 @@ import { SiMongodb } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { SiJirasoftware } from "react-icons/si";
+import { AiFillOpenAI } from "react-icons/ai";
+import { SiLangchain } from "react-icons/si";
+import { SiAstra } from "react-icons/si";
 
 export default function Home() {
   const [errors, setErrors] = useState({});
@@ -197,22 +200,40 @@ export default function Home() {
         <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row items-center">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiNextjsFill className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
-                </div>
-                <div className="flex flex-row">
-                  <IoLogoFirebase className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">FireBase</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiTailwindCssFill className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">Tailwind</p>
+              <div className="text-white flex flex-1">
+                <div className="flex flex-row gap-5 ">
+                  <div className="flex flex-col space-y-3">
+                    <div className="flex flex-row items-center">
+                      <FaReact className="mr-3" />
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">React</p>
+                    </div>
+                    <div className="flex flex-row">
+                      <RiNextjsFill className="mr-3" />
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">NextJS</p>
+                    </div>
+                    <div className="flex flex-row">
+                      <IoLogoFirebase className="mr-3" />
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">FireBase</p>
+                    </div>
+                    <div className="flex flex-row">
+                      <RiTailwindCssFill className="mr-3" />
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">Tailwind</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col space-y-3">
+                    <div className="flex flex-row items-center">
+                      <AiFillOpenAI className="mr-3" />
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">OpenAI</p>
+                    </div>
+                    <div className="flex flex-row">
+                      <SiLangchain className="mr-3" />
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">LangChain</p>
+                    </div>
+                    <div className="flex flex-row">
+                      <SiAstra className="mr-3" />
+                      <p className=" hidden lg:block sm:text-xl lg:text-3xl">AstraDB</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
@@ -233,7 +254,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">HealthDiary</h1>
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
+                HealthDiary
+              </h1>
               <p className="">
                 HealthDiary is a service that provides access to a dynamic
                 calorie tracking application, with the goal of assisting users
@@ -280,7 +303,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">OpenHouse</h1>
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
+                OpenHouse
+              </h1>
               <p className="">
                 OpenHouse is a platform that streamlines the management and
                 advertisement process of open house listings...
@@ -328,7 +353,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">TechByte</h1>
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
+                TechByte
+              </h1>
               <p className="">
                 Tech product based e-commerce store for all your tech needs!
               </p>
@@ -372,7 +399,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">Seeker</h1>
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
+                Seeker
+              </h1>
               <p className="">
                 A job search engine for jobs. Facilitates individual job
                 postings and company promotion.
@@ -430,7 +459,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          
         </div>
       </div>
       <div
@@ -440,8 +468,7 @@ export default function Home() {
         <div className="pointer-events-none space-y-20 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
-            Born in Japan. <b>Grew up in 3 countries</b> and currently looking
-            to become a Web Developer.
+            Born in Hong Kong. <b>Grew up in 3 countries</b> and currently aspiring to become a <b>React/NextJS Front-End Developer.</b>
           </p>
           <p>
             Currently studying a{" "}
