@@ -205,33 +205,47 @@ export default function Home() {
                   <div className="flex flex-col space-y-3">
                     <div className="flex flex-row items-center">
                       <FaReact className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">React</p>
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
+                        React
+                      </p>
                     </div>
                     <div className="flex flex-row">
                       <RiNextjsFill className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">NextJS</p>
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
+                        NextJS
+                      </p>
                     </div>
                     <div className="flex flex-row">
                       <IoLogoFirebase className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">FireBase</p>
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
+                        FireBase
+                      </p>
                     </div>
                     <div className="flex flex-row">
                       <RiTailwindCssFill className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">Tailwind</p>
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
+                        Tailwind
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-col space-y-3">
                     <div className="flex flex-row items-center">
                       <AiFillOpenAI className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">OpenAI</p>
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
+                        OpenAI
+                      </p>
                     </div>
                     <div className="flex flex-row">
                       <SiLangchain className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">LangChain</p>
+                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
+                        LangChain
+                      </p>
                     </div>
                     <div className="flex flex-row">
                       <SiAstra className="mr-3" />
-                      <p className=" hidden lg:block sm:text-xl lg:text-3xl">AstraDB</p>
+                      <p className=" hidden lg:block sm:text-xl lg:text-3xl">
+                        AstraDB
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -410,7 +424,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:px-10 min-h-[50vh] sm:px-5 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+        <div className="lg:px-10 min-h-[500px] sm:px-5 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
@@ -468,7 +482,8 @@ export default function Home() {
         <div className="pointer-events-none space-y-20 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
-            Born in Hong Kong. <b>Grew up in 3 countries</b> and currently aspiring to become a <b>React/NextJS Front-End Developer.</b>
+            Born in Hong Kong. <b>Grew up in 3 countries</b> and currently
+            aspiring to become a <b>React/NextJS Front-End Developer.</b>
           </p>
           <p>
             Currently studying a{" "}
