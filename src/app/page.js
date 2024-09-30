@@ -5,7 +5,7 @@ import { RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
-import { DiDotnet } from "react-icons/di";
+import { DiDotnet, DiPostgresql } from "react-icons/di";
 import { BsFiletypeSql } from "react-icons/bs";
 import { SiCsharp } from "react-icons/si";
 import { FaSquareGithub } from "react-icons/fa6";
@@ -375,7 +375,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/seeker-app.png')]  bg-cover bg-center">
+          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/reviewme-app.png')]  bg-cover bg-center">
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
@@ -387,8 +387,8 @@ export default function Home() {
                   <p className=" sm:text-xl lg:text-3xl">NextJS</p>
                 </div>
                 <div className="flex flex-row">
-                  <IoLogoFirebase className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
+                  <DiPostgresql className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">PostgreSQL</p>
                 </div>
                 <div className="flex flex-row">
                   <SiPrisma className="mr-3" />
@@ -397,14 +397,14 @@ export default function Home() {
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
                 <a
-                  href="https://seeker-board.vercel.app/"
+                  href="https://reviewme-jet.vercel.app/"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   LIVE
                 </a>
                 <a
-                  href="https://github.com/rikichoi/seeker-app"
+                  href="https://github.com/rikichoi/reviewme-nextjs"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
@@ -414,11 +414,10 @@ export default function Home() {
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
-                Seeker
+                ReviewMe
               </h1>
               <p className="">
-                A job search engine for jobs. Facilitates individual job
-                postings and company promotion.
+                ReviewMe is a platform that allows users to post reviews and start threads about ANYTHING!
               </p>
             </div>
           </div>
