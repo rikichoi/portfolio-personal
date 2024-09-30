@@ -482,7 +482,7 @@ export default function Home() {
           <h1 className="font-bold">ABOUT ME</h1>
           <p>
             Born in Hong Kong. <b>Grew up in 3 countries</b> and currently
-            aspiring to become a <b>React/NextJS Front-End Developer.</b>
+            aspiring to become a <b>Full-Stack Developer.</b>
           </p>
           <p>
             Currently studying a{" "}
