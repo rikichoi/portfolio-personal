@@ -20,7 +20,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { Tooltip } from "@nextui-org/tooltip";
 import { Resend } from "resend";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sendEmail from "./actions/sendEmail";
 import { toast } from "react-toastify";
 import { BsStripe } from "react-icons/bs";
@@ -31,7 +31,8 @@ import { SiJirasoftware } from "react-icons/si";
 import { AiFillOpenAI } from "react-icons/ai";
 import { SiLangchain } from "react-icons/si";
 import { SiAstra } from "react-icons/si";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const [errors, setErrors] = useState({});
@@ -39,6 +40,61 @@ export default function Home() {
   const emailRef = useRef();
   const subjectRef = useRef();
   const messageRef = useRef();
+  const ref1 = useRef();
+  const ref2 = useRef();
+  const ref3 = useRef();
+  const ref4 = useRef();
+  const ref5 = useRef();
+  const ref6 = useRef();
+  const ref7 = useRef();
+
+  const isInView = useInView(ref1, { once: true });
+  const projectSectionisInView = useInView(ref2, { once: true });
+  const project1isInView = useInView(ref3, { once: true });
+  const project2isInView = useInView(ref4, { once: true });
+  const project3isInView = useInView(ref5, { once: true });
+  const project4isInView = useInView(ref6, { once: true });
+  const project5isInView = useInView(ref7, { once: true });
+
+  const mainControls = useAnimation();
+  const projectControls = useAnimation();
+  const project1Controls = useAnimation();
+  const project2Controls = useAnimation();
+  const project3Controls = useAnimation();
+  const project4Controls = useAnimation();
+  const project5Controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+    if (projectSectionisInView) {
+      projectControls.start("visible");
+    }
+    if (project1isInView) {
+      project1Controls.start("visible");
+    }
+    if (project2isInView) {
+      project2Controls.start("visible");
+    }
+    if (project3isInView) {
+      project3Controls.start("visible");
+    }
+    if (project4isInView) {
+      project4Controls.start("visible");
+    }
+    if (project5isInView) {
+      project5Controls.start("visible");
+    }
+  }, [
+    isInView,
+    projectSectionisInView,
+    project1isInView,
+    project2isInView,
+    project3isInView,
+    project4isInView,
+    project5isInView,
+  ]);
 
   const validate = () => {
     let errors = {};
@@ -75,8 +131,16 @@ export default function Home() {
 
   return (
     <main className="bg-[#ffffff]">
-      <div className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
+      <motion.div className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></motion.div>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: -75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2"
+      >
         <div className="flex justify-center items-center">
           <Image
             src={Logo}
@@ -85,15 +149,23 @@ export default function Home() {
           ></Image>
         </div>
         <div className="flex justify-center items-center">
-          <a
+          <Link
             href="#contact"
             className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 sm:py-2 lg:py-4 sm:px-2 lg:px-3 text-center max-w-40 w-full sm:text-sm lg:text-xl"
           >
             CONTACT ME
-          </a>
+          </Link>
         </div>
-      </div>
-      <div className="flex min-h-screen w-full flex-col items-center justify-between px-8 p-24">
+      </motion.div>
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        className="flex min-h-screen w-full flex-col items-center justify-between px-8 p-24"
+      >
         <div className="z-40 w-full items-center justify-between font-mono text-sm lg:flex"></div>
         <div className="xs:h-full h-full grid gap-3">
           <div className="xs:flex-col w-full sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
@@ -150,30 +222,48 @@ export default function Home() {
             FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
           </h1>
           <div className="flex z-40 flex-row gap-10">
-            <a
+            <Link
               href="#about"
               className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               ABOUT ME
-            </a>
-            <a
+            </Link>
+            <Link
               href="#projects"
               className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               PROJECTS
-            </a>
+            </Link>
           </div>
         </div>
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
-      </div>
-      <div className="grid sm:pb-10 sm:grid-cols-1 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <p className="pointer-events-none col-span-2 text-white  py-16 sm:text-center sm:px-2 lg:pl-24 text-4xl">
+      </motion.div>
+      <div className="grid gap-y-5 sm:pb-10 sm:grid-cols-1 py-16 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
+        <motion.p
+          ref={ref1}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className="pointer-events-none text-2xl col-span-2 text-white sm:text-center sm:px-2 lg:pl-24 lg:text-4xl"
+        >
           I am an <b>enthusiastic developer</b> with a passion for creating{" "}
           <b>solutions for complex problems.</b>
-        </p>
-        <div className="items-center flex justify-center">
-          <a
+        </motion.p>
+        <motion.div
+          ref={ref1}
+          variants={{
+            hidden: { opacity: 0, y: 75 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          initial="hidden"
+          animate={mainControls}
+          className="items-center flex justify-center"
+        >
+          <Link
             href="/files/Riki-Choi-Resume.pdf"
             alt="Riki Choi Resume"
             target="_blank"
@@ -181,33 +271,60 @@ export default function Home() {
             className="bg-zinc-50 hover:bg-zinc-900 hover:rounded-2xl hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
           >
             RESUME
-          </a>
-        </div>
+          </Link>
+        </motion.div>
       </div>
       <div
         id="projects"
         className="scroll-mt-16 grid gap-5 min-h-screen sm:grid-rows-7 bg-[#ffffff] "
       >
         <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-[#ffffff] ">
-          <div className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900  py-16 sm:px-2 lg:px-12 text-4xl">
-            PROJECTS
-            <p className="text-xl text-center font-semibold justify-center flex text-black">
+          <motion.div
+            ref={ref2}
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={projectControls}
+            className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900  py-16 sm:px-2 lg:px-12 text-4xl"
+          >
+            <motion.p>PROJECTS</motion.p>
+            <motion.p className="text-xl text-center font-semibold justify-center flex text-black">
               *demo account details provided in project login pages*
-            </p>
-          </div>
-          <div className="items-center flex justify-center">
-            <a
+            </motion.p>
+          </motion.div>
+          <motion.div
+            ref={ref2}
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={projectControls}
+            className="items-center flex justify-center"
+          >
+            <motion.a
               href="https://github.com/rikichoi"
               target="_blank"
               className="bg-gray-950 hover:bg-cyan-600 transition-all duration-500 font-bold py-5 text-white text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               GITHUB
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
 
         <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center">
+          <motion.div
+            ref={ref3}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={project1Controls}
+            className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center"
+          >
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white flex flex-1">
                 <div className="flex flex-row gap-5 ">
@@ -260,20 +377,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <a
+                <Link
                   href="https://calorie-tracker-app-one.vercel.app/"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   LIVE
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/rikichoi/calorie-tracking-app"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   GITHUB
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
@@ -286,9 +403,18 @@ export default function Home() {
                 of any type to stay on top of their health and nutrition...
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center">
+          <motion.div
+            ref={ref4}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={project2Controls}
+            className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center"
+          >
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
@@ -309,20 +435,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <a
+                <Link
                   href="https://openhouse-listing-app.vercel.app/"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   LIVE
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/rikichoi/openhouse-listing-app"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   GITHUB
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
@@ -334,11 +460,20 @@ export default function Home() {
                 advertisement process of open house listings...
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/techbyte-app.png')] bg-cover bg-center">
+          <motion.div
+            ref={ref5}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={project3Controls}
+            className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/techbyte-app.png')] bg-cover bg-center"
+          >
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
@@ -359,20 +494,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <a
+                <Link
                   href="https://techbyte-store.vercel.app/"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   LIVE
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/rikichoi/techbyte-store"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   GITHUB
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
@@ -383,8 +518,18 @@ export default function Home() {
                 Tech product based e-commerce store for all your tech needs!
               </p>
             </div>
-          </div>
-          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/reviewme-app.png')]  bg-cover bg-center">
+          </motion.div>
+
+          <motion.div
+            ref={ref6}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={project4Controls}
+            className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/reviewme-app.png')]  bg-cover bg-center"
+          >
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
@@ -405,20 +550,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <a
+                <Link
                   href="https://reviewme-jet.vercel.app/"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   LIVE
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/rikichoi/reviewme-nextjs"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   GITHUB
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
@@ -430,11 +575,20 @@ export default function Home() {
                 start threads about ANYTHING!
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="lg:px-10 min-h-[500px] sm:px-5 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <div className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/nba-app.jpg')]  bg-cover bg-center">
+          <motion.div
+            ref={ref7}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={project5Controls}
+            className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/nba-app.jpg')]  bg-cover bg-center"
+          >
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
@@ -455,20 +609,20 @@ export default function Home() {
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <a
+                <Link
                   href="https://youtu.be/EqkZ8--z3ag"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   VIDEO
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/dan933/2022-NBA-Prediction-Application"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   GITHUB
-                </a>
+                </Link>
               </div>
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
@@ -481,9 +635,10 @@ export default function Home() {
                 odds of NBA teams...
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
+
       <div
         id="about"
         className="min-h-screen items-center justify-center flex bg-[#ffffff]"
@@ -576,7 +731,7 @@ export default function Home() {
             LinkedIn
           </p>
           <div className="py-10 w-full gap-10 text-4xl flex justify-center text-center items-center flex-row">
-            <a
+            <Link
               href="/files/Riki-Choi-Resume.pdf"
               alt="Riki Choi Resume"
               target="_blank"
@@ -584,27 +739,27 @@ export default function Home() {
               className="flex hover:text-red-600 items-center flex-row"
             >
               <FaDownload className="text-3xl" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://github.com/rikichoi"
               target="_blank"
               className="flex hover:text-red-600 items-center flex-row"
             >
               <FaGithub />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/in/rikichoi/"
               target="_blank"
               className="flex hover:text-red-600 items-center flex-row"
             >
               <FaLinkedin />
-            </a>
-            <a
+            </Link>
+            <Link
               href="mailto:choi.riki@gmail.com"
               className="flex hover:text-red-600 items-center flex-row"
             >
               <MdOutlineEmail />
-            </a>
+            </Link>
           </div>
           <form action={() => submitHandler()}>
             <div className=" font-bold gap-10 flex flex-row items-center justify-center">
