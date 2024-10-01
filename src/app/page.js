@@ -31,6 +31,7 @@ import { SiJirasoftware } from "react-icons/si";
 import { AiFillOpenAI } from "react-icons/ai";
 import { SiLangchain } from "react-icons/si";
 import { SiAstra } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [errors, setErrors] = useState({});
@@ -74,8 +75,8 @@ export default function Home() {
 
   return (
     <main className="bg-[#ffffff]">
-      <div class="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-[#ffffff] border-b-2">
+      <div className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      <div className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2">
         <div className="flex justify-center items-center">
           <Image
             src={Logo}
@@ -96,48 +97,56 @@ export default function Home() {
         <div className="z-40 w-full items-center justify-between font-mono text-sm lg:flex"></div>
         <div className="xs:h-full h-full grid gap-3">
           <div className="xs:flex-col w-full sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
-            <h1 className="w-full z-50 pointer-events-none">RIKI CHOI</h1>
-            <div className="sm:z-50 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
+            <h1 className="w-full z-40 pointer-events-none">RIKI CHOI</h1>
+            <div className="sm:z-40 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
               <Tooltip showArrow={true} content="Download CV PDF">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
                   href="/files/Riki-Choi-Resume.pdf"
                   alt="Riki Choi Resume"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex hover:text-red-600"
+                  className="flex hover:text-blue-500"
                 >
                   <FaDownload className="text-3xl" />
-                </a>
+                </motion.a>
               </Tooltip>
               <Tooltip showArrow={true} content="GitHub">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
                   href="https://github.com/rikichoi"
                   target="_blank"
-                  className="flex hover:text-red-600"
+                  className="flex hover:text-blue-500"
                 >
                   <FaGithub />
-                </a>
+                </motion.a>
               </Tooltip>
               <Tooltip showArrow={true} content="LinkedIn">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
                   href="https://www.linkedin.com/in/rikichoi/"
                   target="_blank"
-                  className="flex hover:text-red-600"
+                  className="flex hover:text-blue-500"
                 >
                   <FaLinkedin />
-                </a>
+                </motion.a>
               </Tooltip>
               <Tooltip showArrow={true} content="Email">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.3 }}
+                  whileTap={{ scale: 0.9 }}
                   href="mailto:choi.riki@gmail.com"
-                  className="flex hover:text-red-600"
+                  className="flex hover:text-blue-500"
                 >
                   <MdOutlineEmail />
-                </a>
+                </motion.a>
               </Tooltip>
             </div>
           </div>
-          <h1 className="z-50 pointer-events-none font-inter font-semibold text-3xl">
+          <h1 className="z-40 pointer-events-none font-inter font-semibold text-3xl">
             FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
           </h1>
           <div className="flex z-40 flex-row gap-10">
@@ -417,7 +426,8 @@ export default function Home() {
                 ReviewMe
               </h1>
               <p className="">
-                ReviewMe is a platform that allows users to post reviews and start threads about ANYTHING!
+                ReviewMe is a platform that allows users to post reviews and
+                start threads about ANYTHING!
               </p>
             </div>
           </div>
