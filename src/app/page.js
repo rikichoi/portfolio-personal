@@ -131,7 +131,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#ffffff]">
-      <motion.div className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></motion.div>
+      <motion.div id="home" className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></motion.div>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: -75 },
@@ -141,17 +141,17 @@ export default function Home() {
         animate="visible"
         className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2"
       >
-        <div className="flex justify-center items-center">
+        <Link href="#home" className="flex justify-center items-center">
           <Image
             src={Logo}
             alt="my logo"
             className="sm:max-w-24 lg:max-w-44 flex-shrink flex"
           ></Image>
-        </div>
+        </Link>
         <div className="flex justify-center items-center">
           <Link
             href="#contact"
-            className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 sm:py-2 lg:py-4 sm:px-2 lg:px-3 text-center max-w-40 w-full sm:text-sm lg:text-xl"
+            className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 sm:py-2 lg:py-4 sm:px-2 lg:px-3 text-center max-w-40 w-full sm:text-sm lg:text-xl"
           >
             CONTACT ME
           </Link>
@@ -224,13 +224,13 @@ export default function Home() {
           <div className="flex z-40 flex-row gap-10">
             <Link
               href="#about"
-              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+              className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               ABOUT ME
             </Link>
             <Link
               href="#projects"
-              className="bg-gray-900 hover:bg-cyan-600 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+              className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               PROJECTS
             </Link>
@@ -307,7 +307,7 @@ export default function Home() {
             <motion.a
               href="https://github.com/rikichoi"
               target="_blank"
-              className="bg-gray-950 hover:bg-cyan-600 transition-all duration-500 font-bold py-5 text-white text-center max-w-40 w-full sm:text-lg lg:text-xl"
+              className="bg-gray-950 hover:bg-blue-500 transition-all duration-500 font-bold py-5 text-white text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
               GITHUB
             </motion.a>
