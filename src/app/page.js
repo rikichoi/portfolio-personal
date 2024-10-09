@@ -175,7 +175,7 @@ export default function Home() {
                 <motion.a
                   whileHover={{ scale: 1.3 }}
                   whileTap={{ scale: 0.9 }}
-                  href="/files/Riki-Choi-Resume.pdf"
+                  href="/files/Riki_Choi_Resume.pdf"
                   alt="Riki Choi Resume"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -264,7 +264,7 @@ export default function Home() {
           className="items-center flex justify-center"
         >
           <Link
-            href="/files/Riki-Choi-Resume.pdf"
+            href="/files/Riki_Choi_Resume.pdf"
             alt="Riki Choi Resume"
             target="_blank"
             rel="noopener noreferrer"
@@ -732,7 +732,7 @@ export default function Home() {
           </p>
           <div className="py-10 w-full gap-10 text-4xl flex justify-center text-center items-center flex-row">
             <Link
-              href="/files/Riki-Choi-Resume.pdf"
+              href="/files/Riki_Choi_Resume.pdf"
               alt="Riki Choi Resume"
               target="_blank"
               rel="noopener noreferrer"
