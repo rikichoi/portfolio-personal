@@ -28,7 +28,7 @@ import { SiMongodb } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { SiJirasoftware } from "react-icons/si";
-import { AiFillOpenAI } from "react-icons/ai";
+import { AiFillOpenAI, AiOutlineLoading } from "react-icons/ai";
 import { SiLangchain } from "react-icons/si";
 import { SiAstra } from "react-icons/si";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -47,6 +47,7 @@ export default function Home() {
   const ref5 = useRef();
   const ref6 = useRef();
   const ref7 = useRef();
+  const ref8 = useRef();
 
   const isInView = useInView(ref1, { once: true });
   const projectSectionisInView = useInView(ref2, { once: true });
@@ -55,6 +56,7 @@ export default function Home() {
   const project3isInView = useInView(ref5, { once: true });
   const project4isInView = useInView(ref6, { once: true });
   const project5isInView = useInView(ref7, { once: true });
+  const project6isInView = useInView(ref8, { once: true });
 
   const mainControls = useAnimation();
   const projectControls = useAnimation();
@@ -63,6 +65,7 @@ export default function Home() {
   const project3Controls = useAnimation();
   const project4Controls = useAnimation();
   const project5Controls = useAnimation();
+  const project6Controls = useAnimation();
 
   useEffect(() => {
     if (isInView) {
@@ -86,6 +89,9 @@ export default function Home() {
     if (project5isInView) {
       project5Controls.start("visible");
     }
+    if (project6isInView) {
+      project6Controls.start("visible");
+    }
   }, [
     isInView,
     projectSectionisInView,
@@ -94,6 +100,7 @@ export default function Home() {
     project3isInView,
     project4isInView,
     project5isInView,
+    project6isInView,
   ]);
 
   const validate = () => {
@@ -131,7 +138,10 @@ export default function Home() {
 
   return (
     <main className="bg-[#ffffff]">
-      <motion.div id="home" className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></motion.div>
+      <motion.div
+        id="home"
+        className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
+      ></motion.div>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: -75 },
@@ -276,7 +286,7 @@ export default function Home() {
       </div>
       <div
         id="projects"
-        className="scroll-mt-16 grid gap-5 min-h-screen sm:grid-rows-7 bg-[#ffffff] "
+        className="scroll-mt-16 grid gap-5 h-full min-h-screen sm:grid-rows-10 lg:grid-rows-7 bg-[#ffffff] "
       >
         <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-[#ffffff] ">
           <motion.div
@@ -578,7 +588,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="lg:px-10 min-h-[500px] sm:px-5 sm:row-span-3 lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+        <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <motion.div
             ref={ref7}
             variants={{
@@ -633,6 +643,40 @@ export default function Home() {
                 A side project that was developed along side a handful of
                 friends. This app assists in sports betting by predicting the
                 odds of NBA teams...
+              </p>
+            </div>
+          </motion.div>
+          <motion.div
+            ref={ref8}
+            variants={{
+              hidden: { opacity: 0, y: 100 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={project6Controls}
+            className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/admindash-app.png')] bg-cover bg-center"
+          >
+            <div className="absolute h-1/2 top-0 bg-gray-800 bg-opacity-40 transition-all duration-500 opacity-100 w-full  flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+              <div className="w-full gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
+                <Link
+                  href="https://github.com/rikichoi/admindash"
+                  target="_blank"
+                  className="bg-gray-500 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
+                >
+                  GITHUB
+                </Link>
+                <h1 className="text-center text-white sm:text-2xl lg:text-4xl  font-semibold w-full flex items-center justify-center gap-12">
+                  Coming Soon <AiOutlineLoading className="animate-spin"  />
+                </h1>
+              </div>
+            </div>
+            <div className="flex absolute h-1/2 bottom-0 transition-all duration-500 bg-gray-800 bg-opacity-40 opacity-100  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
+                AdminDash
+              </h1>
+              <p className="">
+                A plug and play backend information system that provides
+                business analytics and finance management
               </p>
             </div>
           </motion.div>
