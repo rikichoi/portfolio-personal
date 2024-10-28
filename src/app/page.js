@@ -7,7 +7,13 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
 import { DiDotnet, DiPostgresql } from "react-icons/di";
 import { BsFiletypeSql } from "react-icons/bs";
-import { SiCsharp } from "react-icons/si";
+import {
+  SiCsharp,
+  SiExpress,
+  SiNodedotjs,
+  SiTypescript,
+  SiZod,
+} from "react-icons/si";
 import { FaSquareGithub } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
@@ -137,7 +143,7 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-[#ffffff]">
+    <main className="bg-[#ffffff] font-kanit">
       <motion.div
         id="home"
         className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
@@ -174,64 +180,66 @@ export default function Home() {
         }}
         initial="hidden"
         animate="visible"
-        className="flex min-h-screen w-full flex-col items-center justify-between px-8 p-24"
+        className="flex min-h-screen w-full flex-col items-center justify-center px-8 pt-28 lg:pt-0"
       >
-        <div className="z-40 w-full items-center justify-between font-mono text-sm lg:flex"></div>
+        <div className="z-40 w-full items-center justify-center font-anek text-sm lg:flex"></div>
         <div className="xs:h-full h-full grid gap-3">
-          <div className="xs:flex-col w-full sm:flex-col font-inter flex lg:flex-row font-bold text-6xl">
-            <h1 className="w-full z-40 pointer-events-none">RIKI CHOI</h1>
-            <div className="sm:z-40 sm:py-4 sm:justify-start w-full gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
+          <div className="xs:flex-col w-full sm:flex-col font-reddit flex lg:flex-row font-bold text-6xl">
+            <h1 className="w-full z-40 pointer-events-none font-anek font-bold  flex items-end">
+              RIKI CHOI
+            </h1>
+            <div className="sm:z-40 sm:py-4 sm:justify-start w-full sm:gap-3 sm:mt-3 gap-10 text-4xl flex lg:justify-center text-center items-center flex-row">
               <Tooltip showArrow={true} content="Download CV PDF">
                 <motion.a
-                  whileHover={{ scale: 1.3 }}
+                  whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                   href="/files/Riki_Choi_Resume.pdf"
                   alt="Riki Choi Resume"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex hover:text-blue-500"
+                  className="flex hover:text-blue-500 hover:bg-blue-600 p-2 rounded-xl bg-gray-900"
                 >
-                  <FaDownload className="text-3xl" />
+                  <FaDownload className="text-white" />
                 </motion.a>
               </Tooltip>
               <Tooltip showArrow={true} content="GitHub">
                 <motion.a
-                  whileHover={{ scale: 1.3 }}
+                  whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                   href="https://github.com/rikichoi"
                   target="_blank"
-                  className="flex hover:text-blue-500"
+                  className="flex hover:text-blue-500 hover:bg-blue-600 p-2 rounded-xl bg-gray-900"
                 >
-                  <FaGithub />
+                  <FaGithub className="text-white" />
                 </motion.a>
               </Tooltip>
               <Tooltip showArrow={true} content="LinkedIn">
                 <motion.a
-                  whileHover={{ scale: 1.3 }}
+                  whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                   href="https://www.linkedin.com/in/rikichoi/"
                   target="_blank"
-                  className="flex hover:text-blue-500"
+                  className="flex hover:text-blue-500 hover:bg-blue-600 p-2 rounded-xl bg-gray-900"
                 >
-                  <FaLinkedin />
+                  <FaLinkedin className="text-white" />
                 </motion.a>
               </Tooltip>
               <Tooltip showArrow={true} content="Email">
                 <motion.a
-                  whileHover={{ scale: 1.3 }}
+                  whileHover={{ scale: 1.2 }}
                   whileTap={{ scale: 0.9 }}
                   href="mailto:choi.riki@gmail.com"
-                  className="flex hover:text-blue-500"
+                  className="flex hover:text-blue-500 hover:bg-blue-600 p-2 rounded-xl bg-gray-900"
                 >
-                  <MdOutlineEmail />
+                  <MdOutlineEmail className="text-white" />
                 </motion.a>
               </Tooltip>
             </div>
           </div>
-          <h1 className="z-40 pointer-events-none font-inter font-semibold text-3xl">
-            FRONT-END WEB DEVELOPER WITH A PASSION FOR CODING.
+          <h1 className="z-40 pointer-events-none font-reddit font-semibold text-3xl">
+            FULL-STACK WEB DEVELOPER WITH A PASSION FOR CODING.
           </h1>
-          <div className="flex z-40 flex-row gap-10">
+          <div className="flex z-40 flex-row gap-3 lg:gap-8">
             <Link
               href="#about"
               className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
@@ -239,18 +247,21 @@ export default function Home() {
               ABOUT ME
             </Link>
             <Link
-              href="#projects"
-              className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+              href="#experience"
+              className="bg-gray-900 uppercase hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
-              PROJECTS
+              Experience
             </Link>
           </div>
         </div>
 
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
       </motion.div>
-      <div className="grid gap-y-5 sm:pb-10 sm:grid-cols-1 py-16 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <motion.p
+      <div
+        id="experience"
+        className="scroll-mt-16 grid gap-y-5 sm:pb-10 sm:grid-cols-1 py-16 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 "
+      >
+        <motion.div
           ref={ref1}
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -258,11 +269,53 @@ export default function Home() {
           }}
           initial="hidden"
           animate={mainControls}
-          className="pointer-events-none text-2xl col-span-2 text-white sm:text-center sm:px-2 lg:pl-24 lg:text-4xl"
+          className="text-2xl col-span-2 text-white sm:px-2 lg:pl-24 lg:text-4xl"
         >
-          I am an <b>enthusiastic developer</b> with a passion for creating{" "}
-          <b>solutions for complex problems.</b>
-        </motion.p>
+          <h1 className="font-anek font-semibold tracking-tight text-xl uppercase mb-5">
+            Work Experience
+          </h1>
+            <Link
+              href="https://www.edable.org.au/"
+              target="_blank"
+              className="font-kanit select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            >
+              EdAble
+            </Link>
+          <h2 className="font-kanit font-semibold tracking-tight">
+            Volunteer Full-Stack Web Developer
+          </h2>
+          <h2 className="font-kanit text-slate-200 tracking-tight">
+            Feb 2022 - Dec 2022
+          </h2>
+          <h3 className="text-xl font-reddit font-bold mt-3">
+            Technical Skills:
+          </h3>
+          <ul className="list-disc sm:text-base tracking-wide pl-5 font-reddit text-xl">
+            <li>
+              <span className="font-semibold">Core Technologies:</span> Angular,
+              FireBase, AWS, Auth0
+            </li>
+            <li>
+              <span className="font-semibold">Tools and Libraries:</span>{" "}
+              WebDataRocks, ChartJS, Angular Material UI
+            </li>
+            <li>
+              <span className="font-semibold">
+                Version Control Development:
+              </span>{" "}
+              Git, GitHub, Jira, Visual Studio, ESLint, Prettier
+            </li>
+            <li>
+              <span className="font-semibold">Project Management:</span> Agile
+              Methodology
+            </li>
+            <li>
+              <span className="font-semibold">Business Documentation:</span>{" "}
+              Feasability, Business Requirements, Software Analysis, Business
+              Case, Project Management Plan
+            </li>
+          </ul>
+        </motion.div>
         <motion.div
           ref={ref1}
           variants={{
@@ -278,7 +331,7 @@ export default function Home() {
             alt="Riki Choi Resume"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-zinc-50 hover:bg-zinc-900 hover:rounded-2xl hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+            className="bg-zinc-50 hover:bg-zinc-900 hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
           >
             RESUME
           </Link>
@@ -299,8 +352,10 @@ export default function Home() {
             animate={projectControls}
             className="pointer-events-none font-semibold flex gap-7 items-center flex-col col-span-2 text-gray-900  py-16 sm:px-2 lg:px-12 text-4xl"
           >
-            <motion.p>PROJECTS</motion.p>
-            <motion.p className="text-xl text-center font-semibold justify-center flex text-black">
+            <motion.p className="font-anek tracking-tight uppercase text-center">
+              Personal Projects
+            </motion.p>
+            <motion.p className="text-xl text-center font-semibold justify-center flex text-black underline-offset-4 underline">
               *demo account details provided in project login pages*
             </motion.p>
           </motion.div>
@@ -666,7 +721,7 @@ export default function Home() {
                   GITHUB
                 </Link>
                 <h1 className="text-center text-white sm:text-2xl lg:text-4xl  font-semibold w-full flex items-center justify-center gap-12">
-                  Coming Soon <AiOutlineLoading className="animate-spin"  />
+                  Coming Soon <AiOutlineLoading className="animate-spin" />
                 </h1>
               </div>
             </div>
@@ -685,40 +740,49 @@ export default function Home() {
 
       <div
         id="about"
-        className="min-h-screen items-center justify-center flex bg-[#ffffff]"
+        className="min-h-screen items-center justify-center py-10 flex bg-[#ffffff]"
       >
-        <div className="pointer-events-none space-y-20 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
-          <h1 className="font-bold">ABOUT ME</h1>
+        <div className="pointer-events-none font-reddit space-y-16 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
+          <h1 className="font-anek tracking-tight uppercase font-semibold">
+            ABOUT ME
+          </h1>
           <p>
-            Born in Hong Kong. <b>Grew up in 3 countries</b> and currently
-            aspiring to become a <b>Full-Stack Developer.</b>
+            Based in Australia. <b>Grew up in 3 countries</b> and currently
+            aspiring to become a <b>Full-Stack Web Developer.</b>
           </p>
           <p>
             Currently studying a{" "}
             <b>
               Bachelor of Information Technology at Swinburne University of
-              Technology.
+              Technology (Majoring in Software Technology).
             </b>{" "}
-            Expecting to graduate this year.
+            Expected to graduate by the end of 2024.
           </p>
           <p>
             When I&apos;m not programming you might find me{" "}
-            <b>playing soccer,</b> <b>watching movies</b> or{" "}
-            <b>grinding competitive FPS shooters & fighting games.</b>
+            <b>playing soccer</b> or <b>watching movies.</b>
           </p>
         </div>
       </div>
-      <div className="grid overflow-x-auto bg-gradient-to-r from-cyan-600 to-blue-500 ">
-        <div className="pointer-events-none text-white  py-16 px-12 text-4xl">
-          <h1 className="font-bold text-start pl-10">MY SKILLS</h1>
-          <div className=" font-bold gap-10 flex flex-row items-center justify-center pt-16 px-10 text-6xl">
+      <div className="overflow-x-auto bg-gradient-to-r from-cyan-600 to-blue-500 ">
+        <div className="pointer-events-none text-white py-16 text-4xl max-w-5xl px-7 mx-auto">
+          <h1 className="font-bold text-start">MY SKILLS</h1>
+          <div className="flex flex-wrap font-bold gap-10 flex-row items-center justify-center pt-16 text-6xl">
             <div className="flex gap-2 items-center flex-col">
               <FaSquareGithub className="" />
               <p className="text-2xl">GitHub</p>
             </div>
             <div className="flex gap-2 items-center flex-col">
+              <FaHtml5 className="" />
+              <p className="text-2xl">HTML</p>
+            </div>
+            <div className="flex gap-2 items-center flex-col">
               <IoLogoJavascript className="" />
               <p className="text-2xl">JavaScript</p>
+            </div>
+            <div className="flex gap-2 items-center flex-col">
+              <SiTypescript className="" />
+              <p className="text-2xl">TypeScript</p>
             </div>
             <div className="flex gap-2 items-center flex-col">
               <FaCss3Alt className="" />
@@ -729,16 +793,24 @@ export default function Home() {
               <p className="text-2xl">Tailwind</p>
             </div>
             <div className="flex gap-2 items-center flex-col">
-              <FaHtml5 className="" />
-              <p className="text-2xl">HTML</p>
-            </div>
-            <div className="flex gap-2 items-center flex-col">
               <FaReact className="" />
               <p className="text-2xl">React</p>
             </div>
             <div className="flex gap-2 items-center flex-col">
               <RiNextjsFill className="" />
               <p className="text-2xl">NextJS</p>
+            </div>
+            <div className="flex gap-2 items-center flex-col">
+              <SiZod className="" />
+              <p className="text-2xl">Zod</p>
+            </div>
+            <div className="flex gap-2 items-center flex-col">
+              <SiNodedotjs />
+              <p className="text-2xl">Node</p>
+            </div>
+            <div className="flex gap-2 items-center flex-col">
+              <SiExpress />
+              <p className="text-2xl">Express</p>
             </div>
             <div className="flex gap-2 items-center flex-col">
               <IoLogoFirebase className="" />
@@ -766,7 +838,7 @@ export default function Home() {
 
       <div
         id="contact"
-        className="grid items-center min-h-screen text-white bg-zinc-900"
+        className="scroll-mt-16 grid items-center min-h-screen text-white bg-zinc-900"
       >
         <div className="w-full  py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
           <h1 className="font-bold">CONTACT</h1>
@@ -808,7 +880,7 @@ export default function Home() {
           <form action={() => submitHandler()}>
             <div className=" font-bold gap-10 flex flex-row items-center justify-center">
               <div className="grid gap-5 w-full sm:grid-cols-1 lg:grid-cols-2">
-                <div className="grid grid-rows-3 w-full  gap-3">
+                <div className="grid grid-rows-3 w-full gap-3">
                   <div>
                     <input
                       ref={nameRef}
@@ -871,6 +943,11 @@ export default function Home() {
               </button>
             </div>
           </form>
+        </div>
+        <div>
+          <p className="text-center text-sm leading-loose text-white">
+            &copy; {new Date().getFullYear()} Riki Choi. All rights reserved.
+          </p>
         </div>
       </div>
     </main>

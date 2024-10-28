@@ -1,3 +1,5 @@
+const { Anek_Tamil, Kanit } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -28,6 +30,9 @@ module.exports = {
       fontFamily: {
         inter: "'Inter', sans-serif",
         poppins: "'Poppins', sans-serif",
+        reddit: "'Reddit Sans', sans-serif",
+        anek: "'Kanit', sans-serif",
+        kanit: "'Anek Tamil', sans-serif",
       },
     },
   },
