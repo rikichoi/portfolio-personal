@@ -39,6 +39,7 @@ import { SiLangchain } from "react-icons/si";
 import { SiAstra } from "react-icons/si";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Link from "next/link";
+import Lenis from "lenis";
 
 export default function Home() {
   const [errors, setErrors] = useState({});
@@ -54,6 +55,7 @@ export default function Home() {
   const ref6 = useRef();
   const ref7 = useRef();
   const ref8 = useRef();
+  const lenis = new Lenis();
 
   const isInView = useInView(ref1, { once: true });
   const projectSectionisInView = useInView(ref2, { once: true });
@@ -108,6 +110,13 @@ export default function Home() {
     project5isInView,
     project6isInView,
   ]);
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
 
   const validate = () => {
     let errors = {};
@@ -274,13 +283,13 @@ export default function Home() {
           <h1 className="font-anek font-semibold tracking-tight text-xl uppercase mb-5">
             Work Experience
           </h1>
-            <Link
-              href="https://www.edable.org.au/"
-              target="_blank"
-              className="font-kanit select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
-            >
-              EdAble
-            </Link>
+          <Link
+            href="https://www.edable.org.au/"
+            target="_blank"
+            className="font-kanit select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+          >
+            EdAble
+          </Link>
           <h2 className="font-kanit font-semibold tracking-tight">
             Volunteer Full-Stack Web Developer
           </h2>
