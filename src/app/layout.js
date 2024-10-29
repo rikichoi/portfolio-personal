@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Riki's Portfolio",
+  title: "Riki Choi - Front End Developer",
   description: "Riki Choi Personal Portfolio",
 };
 
