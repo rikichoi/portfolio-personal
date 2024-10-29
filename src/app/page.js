@@ -55,7 +55,6 @@ export default function Home() {
   const ref6 = useRef();
   const ref7 = useRef();
   const ref8 = useRef();
-  const lenis = new Lenis();
 
   const isInView = useInView(ref1, { once: true });
   const projectSectionisInView = useInView(ref2, { once: true });
@@ -111,12 +110,15 @@ export default function Home() {
     project6isInView,
   ]);
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-  requestAnimationFrame(raf);
+    requestAnimationFrame(raf);
+  }, []);
 
   const validate = () => {
     let errors = {};
