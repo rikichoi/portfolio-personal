@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
+import { RiAttachment2, RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
@@ -20,7 +20,7 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { DiFirebase } from "react-icons/di";
 import Logo from "@/app/images/logo.png";
-import { MdOutlineEmail } from "react-icons/md";
+import { MdAttachment, MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
@@ -248,14 +248,18 @@ export default function Home() {
             </div>
           </div>
           <h1 className="z-40 pointer-events-none font-reddit font-semibold text-3xl">
-            FULL-STACK WEB DEVELOPER WITH A PASSION FOR CODING.
+            FRONTEND WEB DEVELOPER WITH A PASSION FOR CODING.
           </h1>
           <div className="flex z-40 flex-row gap-3 lg:gap-8">
             <Link
-              href="#about"
-              className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+              href="/files/Riki_Choi_Resume.pdf"
+              alt="Riki Choi Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gray-900 pr-2 items-center justify-center flex gap-1 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 py-5 text-center max-w-40 w-full sm:text-lg lg:text-xl"
             >
-              ABOUT ME
+              <RiAttachment2 size={20} />
+              RESUME
             </Link>
             <Link
               href="#experience"
