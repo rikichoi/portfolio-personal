@@ -7,25 +7,18 @@ import { IoLogoFirebase } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
 import { DiDotnet, DiPostgresql } from "react-icons/di";
 import { BsFiletypeSql } from "react-icons/bs";
-import {
-  SiCsharp,
-  SiExpress,
-  SiNodedotjs,
-  SiTypescript,
-  SiZod,
-} from "react-icons/si";
+import { SiExpress, SiNodedotjs, SiTypescript, SiZod } from "react-icons/si";
 import { FaSquareGithub } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { DiFirebase } from "react-icons/di";
 import Logo from "@/app/images/logo.png";
-import { MdAttachment, MdOutlineEmail } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 import { Tooltip } from "@nextui-org/tooltip";
-import { Resend } from "resend";
 import { useEffect, useRef, useState } from "react";
 import sendEmail from "./actions/sendEmail";
 import { toast } from "react-toastify";
@@ -34,7 +27,7 @@ import { SiMongodb } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { SiJirasoftware } from "react-icons/si";
-import { AiFillOpenAI, AiOutlineLoading } from "react-icons/ai";
+import { AiFillOpenAI } from "react-icons/ai";
 import { SiLangchain } from "react-icons/si";
 import { SiAstra } from "react-icons/si";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -716,6 +709,7 @@ export default function Home() {
               </p>
             </div>
           </motion.div>
+
           <motion.div
             ref={ref8}
             variants={{
@@ -726,27 +720,50 @@ export default function Home() {
             animate={project6Controls}
             className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/admindash-app.png')] bg-cover bg-center"
           >
-            <div className="absolute h-1/2 top-0 bg-gray-800 bg-opacity-40 transition-all duration-500 opacity-100 w-full  flex flex-row pt-12 sm:px-5 px-10 text-4xl">
-              <div className="w-full gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
+            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+              <div className="text-white space-y-3">
+                <div className="flex flex-row items-center">
+                  <FaReact className="mr-3" />
+                  <p className="sm:text-xl lg:text-3xl">React</p>
+                </div>
+                <div className="flex flex-row">
+                  <RiNextjsFill className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
+                </div>
+                <div className="flex flex-row">
+                  <SiNodedotjs className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">Node</p>
+                </div>
+                <div className="flex flex-row">
+                  <SiExpress className="mr-3" />
+                  <p className=" sm:text-xl lg:text-3xl">Express</p>
+                </div>
+              </div>
+              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
+                <Link
+                  href="https://admindash-sooty.vercel.app"
+                  target="_blank"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
+                >
+                  LIVE
+                </Link>
                 <Link
                   href="https://github.com/rikichoi/admindash"
                   target="_blank"
-                  className="bg-gray-500 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
+                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
                   GITHUB
                 </Link>
-                <h1 className="text-center text-white sm:text-2xl lg:text-4xl  font-semibold w-full flex items-center justify-center gap-12">
-                  Coming Soon <AiOutlineLoading className="animate-spin" />
-                </h1>
               </div>
             </div>
-            <div className="flex absolute h-1/2 bottom-0 transition-all duration-500 bg-gray-800 bg-opacity-40 opacity-100  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+
+            <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
                 AdminDash
               </h1>
               <p className="">
-                A plug and play backend information system that provides
-                business analytics and finance management
+                An information system that provides business analytics
+                and finance management
               </p>
             </div>
           </motion.div>
