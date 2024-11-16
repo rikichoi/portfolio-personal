@@ -347,7 +347,7 @@ export default function Home() {
       </div>
       <div
         id="projects"
-        className="scroll-mt-16 grid gap-5 h-full min-h-screen sm:grid-rows-10 lg:grid-rows-7 bg-[#ffffff] "
+        className="scroll-mt-16 grid gap-5 h-full min-h-screen sm:grid-rows-7 lg:grid-rows-5 bg-[#ffffff] "
       >
         <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-[#ffffff] ">
           <motion.div
@@ -648,122 +648,6 @@ export default function Home() {
                 HealthDiary is a service that provides access to a dynamic
                 calorie tracking application, with the goal of assisting users
                 of any type to stay on top of their health and nutrition...
-              </p>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-          <motion.div
-            ref={ref7}
-            variants={{
-              hidden: { opacity: 0, y: 100 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate={project5Controls}
-            className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/nba-app.jpg')]  bg-cover bg-center"
-          >
-            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row items-center">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <DiDotnet className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">.NET</p>
-                </div>
-                <div className="flex flex-row">
-                  <FaAws className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">AWS</p>
-                </div>
-                <div className="flex flex-row">
-                  <BsFiletypeSql className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">SQL</p>
-                </div>
-              </div>
-              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <Link
-                  href="https://youtu.be/EqkZ8--z3ag"
-                  target="_blank"
-                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
-                >
-                  VIDEO
-                </Link>
-                <Link
-                  href="https://github.com/dan933/2022-NBA-Prediction-Application"
-                  target="_blank"
-                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
-                >
-                  GITHUB
-                </Link>
-              </div>
-            </div>
-            <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="sm:text-2xl lg:text-4xl font-semibold w-full">
-                NBA Prediction Application
-              </h1>
-              <p className="">
-                A side project that was developed along side a handful of
-                friends. This app assists in sports betting by predicting the
-                odds of NBA teams...
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            ref={ref5}
-            variants={{
-              hidden: { opacity: 0, y: 100 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate={project3Controls}
-            className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/techbyte-app.png')] bg-cover bg-center"
-          >
-            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
-              <div className="text-white space-y-3">
-                <div className="flex flex-row items-center">
-                  <FaReact className="mr-3" />
-                  <p className="sm:text-xl lg:text-3xl">React</p>
-                </div>
-                <div className="flex flex-row">
-                  <RiNextjsFill className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">NextJS</p>
-                </div>
-                <div className="flex flex-row">
-                  <IoLogoFirebase className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">MongoDB</p>
-                </div>
-                <div className="flex flex-row">
-                  <BsStripe className="mr-3" />
-                  <p className=" sm:text-xl lg:text-3xl">Stripe</p>
-                </div>
-              </div>
-              <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
-                <Link
-                  href="https://techbyte-store.vercel.app/"
-                  target="_blank"
-                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
-                >
-                  LIVE
-                </Link>
-                <Link
-                  href="https://github.com/rikichoi/techbyte-store"
-                  target="_blank"
-                  className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
-                >
-                  GITHUB
-                </Link>
-              </div>
-            </div>
-            <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
-              <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
-                TechByte
-              </h1>
-              <p className="">
-                Tech product based e-commerce store for all your tech needs!
               </p>
             </div>
           </motion.div>
