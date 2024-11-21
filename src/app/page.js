@@ -152,6 +152,8 @@ export default function Home() {
         id="home"
         className="min-h-screen absolute inset-0 h-full w-full bg-[#ffffff] bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"
       ></motion.div>
+
+      {/* Navbar Section */}
       <motion.div
         variants={{
           hidden: { opacity: 0, y: -75 },
@@ -159,24 +161,28 @@ export default function Home() {
         }}
         initial="hidden"
         animate="visible"
-        className="fixed top-0 w-full flex justify-between min-w-full z-50 sm:px-2 lg:px-44 min-h-12 py-2 bg-white border-b-2"
+        className="fixed top-0 w-full min-w-full z-50  bg-white border-b-2"
       >
-        <Link href="#home" className="flex justify-center items-center">
-          <Image
-            src={Logo}
-            alt="my logo"
-            className="sm:max-w-24 lg:max-w-44 flex-shrink flex"
-          ></Image>
-        </Link>
-        <div className="flex justify-center items-center">
-          <Link
-            href="#contact"
-            className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 sm:py-2 lg:py-4 sm:px-2 lg:px-3 text-center max-w-40 w-full sm:text-sm lg:text-xl"
-          >
-            CONTACT ME
+        <div className="max-w-[90rem] w-full mx-auto flex justify-between sm:px-2 lg:px-44 min-h-12 py-2">
+          <Link href="#home" className="flex justify-center items-center">
+            <Image
+              src={Logo}
+              alt="my logo"
+              className="sm:max-w-24 lg:max-w-44 flex-shrink flex"
+            ></Image>
           </Link>
+          <div className="flex justify-center items-center">
+            <Link
+              href="#contact"
+              className="bg-gray-900 hover:bg-blue-500 transition-all duration-500 text-white font-semibold z-50 sm:py-2 lg:py-4 sm:px-2 lg:px-3 text-center max-w-40 w-full sm:text-sm lg:text-xl"
+            >
+              CONTACT ME
+            </Link>
+          </div>
         </div>
       </motion.div>
+
+      {/* Home Section */}
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -267,89 +273,91 @@ export default function Home() {
       </motion.div>
       <div
         id="experience"
-        className="scroll-mt-16 grid gap-y-5 sm:pb-10 sm:grid-cols-1 py-16 lg:grid-cols-3 bg-gradient-to-r from-cyan-600 to-blue-500 "
+        className="scroll-mt-16 bg-gradient-to-r from-cyan-600 to-blue-500 "
       >
-        <motion.div
-          ref={ref1}
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate={mainControls}
-          className="text-2xl col-span-2 text-white sm:px-2 lg:pl-24 lg:text-4xl"
-        >
-          <h1 className="font-anek font-semibold tracking-tight text-xl uppercase mb-5">
-            Work Experience
-          </h1>
-          <Link
-            href="https://www.edable.org.au/"
-            target="_blank"
-            className="font-kanit select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+        <div className="max-w-[90rem] w-full mx-auto grid gap-y-5 sm:pb-10 sm:grid-cols-1 py-16 lg:grid-cols-3">
+          <motion.div
+            ref={ref1}
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            className="text-2xl col-span-2 text-white sm:px-2 lg:pl-24 lg:text-4xl"
           >
-            EdAble
-          </Link>
-          <h2 className="font-kanit font-semibold tracking-tight">
-            Volunteer Full-Stack Web Developer
-          </h2>
-          <h2 className="font-kanit text-slate-200 tracking-tight">
-            Feb 2022 - Dec 2022
-          </h2>
-          <h3 className="text-xl font-reddit font-bold mt-3">
-            Technical Skills:
-          </h3>
-          <ul className="list-disc sm:text-base tracking-wide pl-5 font-reddit text-xl">
-            <li>
-              <span className="font-semibold">Core Technologies:</span> Angular,
-              FireBase, AWS, Auth0
-            </li>
-            <li>
-              <span className="font-semibold">Tools and Libraries:</span>{" "}
-              WebDataRocks, ChartJS, Angular Material UI
-            </li>
-            <li>
-              <span className="font-semibold">
-                Version Control Development:
-              </span>{" "}
-              Git, GitHub, Jira, Visual Studio, ESLint, Prettier
-            </li>
-            <li>
-              <span className="font-semibold">Project Management:</span> Agile
-              Methodology
-            </li>
-            <li>
-              <span className="font-semibold">Business Documentation:</span>{" "}
-              Feasability, Business Requirements, Software Analysis, Business
-              Case, Project Management Plan
-            </li>
-          </ul>
-        </motion.div>
-        <motion.div
-          ref={ref1}
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          initial="hidden"
-          animate={mainControls}
-          className="items-center flex justify-center"
-        >
-          <Link
-            href="/files/Riki_Choi_Resume.pdf"
-            alt="Riki Choi Resume"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-zinc-50 hover:bg-zinc-900 hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+            <h1 className="font-anek font-semibold tracking-tight text-xl uppercase mb-5">
+              Work Experience
+            </h1>
+            <Link
+              href="https://www.edable.org.au/"
+              target="_blank"
+              className="font-kanit select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            >
+              EdAble
+            </Link>
+            <h2 className="font-kanit font-semibold tracking-tight">
+              Volunteer Full-Stack Web Developer
+            </h2>
+            <h2 className="font-kanit text-slate-200 tracking-tight">
+              Feb 2022 - Dec 2022
+            </h2>
+            <h3 className="text-xl font-reddit font-bold mt-3">
+              Technical Skills:
+            </h3>
+            <ul className="list-disc sm:text-base tracking-wide pl-5 font-reddit text-xl">
+              <li>
+                <span className="font-semibold">Core Technologies:</span>{" "}
+                Angular, FireBase, AWS, Auth0
+              </li>
+              <li>
+                <span className="font-semibold">Tools and Libraries:</span>{" "}
+                WebDataRocks, ChartJS, Angular Material UI
+              </li>
+              <li>
+                <span className="font-semibold">
+                  Version Control Development:
+                </span>{" "}
+                Git, GitHub, Jira, Visual Studio, ESLint, Prettier
+              </li>
+              <li>
+                <span className="font-semibold">Project Management:</span> Agile
+                Methodology
+              </li>
+              <li>
+                <span className="font-semibold">Business Documentation:</span>{" "}
+                Feasability, Business Requirements, Software Analysis, Business
+                Case, Project Management Plan
+              </li>
+            </ul>
+          </motion.div>
+          <motion.div
+            ref={ref1}
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            className="items-center flex justify-center"
           >
-            RESUME
-          </Link>
-        </motion.div>
+            <Link
+              href="/files/Riki_Choi_Resume.pdf"
+              alt="Riki Choi Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-zinc-50 hover:bg-zinc-900 hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+            >
+              RESUME
+            </Link>
+          </motion.div>
+        </div>
       </div>
       <div
         id="projects"
         className="scroll-mt-16 grid gap-5 h-full min-h-screen sm:grid-rows-7 lg:grid-rows-5 bg-[#ffffff] "
       >
-        <div className="row-span-1 sm:grid-cols-1 grid lg:grid-cols-3 bg-[#ffffff] ">
+        <div className="row-span-1 max-w-[90rem] w-full mx-auto sm:grid-cols-1 grid lg:grid-cols-3 bg-[#ffffff] ">
           <motion.div
             ref={ref2}
             variants={{
@@ -387,7 +395,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+        <div className="lg:px-10 sm:px-5 sm:row-span-3 max-w-[90rem] w-full mx-auto lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
           <motion.div
             ref={ref6}
             variants={{
@@ -504,8 +512,8 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <div className="lg:px-10 sm:px-5 sm:row-span-3  lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
-        <motion.div
+        <div className="lg:px-10 sm:px-5 sm:row-span-3 max-w-[90rem] w-full mx-auto lg:row-span-2 lg:gap-5 sm:gap-y-3 grid sm:grid-cols-1 lg:grid-cols-5">
+          <motion.div
             ref={ref4}
             variants={{
               hidden: { opacity: 0, y: 100 },
@@ -656,7 +664,7 @@ export default function Home() {
 
       <div
         id="about"
-        className="min-h-screen items-center justify-center py-10 flex bg-[#ffffff]"
+        className="min-h-screen max-w-[90rem] w-full mx-auto items-center justify-center py-10 flex bg-[#ffffff]"
       >
         <div className="pointer-events-none font-reddit space-y-16 text-black  sm:text-xl sm:text-center lg:text-start lg:px-24 lg:text-4xl">
           <h1 className="font-anek tracking-tight uppercase font-semibold">
@@ -756,7 +764,7 @@ export default function Home() {
         id="contact"
         className="scroll-mt-16 grid items-center min-h-screen text-white bg-zinc-900"
       >
-        <div className="w-full  py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
+        <div className="w-full max-w-[90rem] w-full mx-auto py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
           <h1 className="font-bold">CONTACT</h1>
           <p className="sm:text-lg lg:text-2xl">
             I&apos;d love to hear from you! Let&apos;s connect via email or
