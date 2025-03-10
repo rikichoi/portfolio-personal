@@ -372,7 +372,7 @@ export default function Home() {
               Personal Projects
             </motion.p>
             <motion.p className="text-xl text-center font-semibold justify-center flex text-black underline-offset-4 underline">
-              *demo account details provided in project login pages*
+              *demo account details provided on login pages*
             </motion.p>
           </motion.div>
           <motion.div
@@ -578,7 +578,7 @@ export default function Home() {
             }}
             initial="hidden"
             animate={project1Controls}
-            className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/calorie-tracker-app.png')]  bg-cover bg-center"
+            className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/bitelog-app.png')]  bg-cover bg-center"
           >
             <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white flex flex-1">
@@ -597,15 +597,15 @@ export default function Home() {
                       </p>
                     </div>
                     <div className="flex flex-row">
-                      <IoLogoFirebase className="mr-3" />
+                      <SiMongodb className="mr-3" />
                       <p className="hidden lg:block sm:text-xl lg:text-3xl">
-                        FireBase
+                        MongoDB
                       </p>
                     </div>
                     <div className="flex flex-row">
-                      <RiTailwindCssFill className="mr-3" />
+                      <SiPrisma className="mr-3" />
                       <p className="hidden lg:block sm:text-xl lg:text-3xl">
-                        Tailwind
+                        Prisma
                       </p>
                     </div>
                   </div>
@@ -616,31 +616,19 @@ export default function Home() {
                         OpenAI
                       </p>
                     </div>
-                    <div className="flex flex-row">
-                      <SiLangchain className="mr-3" />
-                      <p className="hidden lg:block sm:text-xl lg:text-3xl">
-                        LangChain
-                      </p>
-                    </div>
-                    <div className="flex flex-row">
-                      <SiAstra className="mr-3" />
-                      <p className=" hidden lg:block sm:text-xl lg:text-3xl">
-                        AstraDB
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>
               <div className="w-1/2 gap-10 sm:flex-col sm:flex-wrap lg:flex-row flex sm:ml-auto lg:ml-auto items-center sm:justify-start  lg:justify-end">
                 <Link
-                  href="https://calorie-tracker-app-one.vercel.app/"
+                  href="https://nextjs-ai-gym.vercel.app/"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full sm:text-sm lg:text-lg"
                 >
                   LIVE
                 </Link>
                 <Link
-                  href="https://github.com/rikichoi/calorie-tracking-app"
+                  href="https://github.com/rikichoi/nextjs-ai-gym"
                   target="_blank"
                   className="bg-gray-900 hover:bg-white hover:border-2 border-2 border-gray-900 hover:text-gray-900 transition-all duration-300 rounded-lg font-bold py-5 text-white text-center sm:max-w-full max-w-40 w-full text-sm lg:text-lg"
                 >
@@ -650,12 +638,13 @@ export default function Home() {
             </div>
             <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
-                HealthDiary
+                BiteLog
               </h1>
               <p className="">
-                HealthDiary is a service that provides access to a dynamic
-                calorie tracking application, with the goal of assisting users
-                of any type to stay on top of their health and nutrition...
+                BiteLog is a dynamic calorie tracking application that utilized
+                AI to generate personalized meal and fitness plans, with the
+                goal of assisting users of any type to stay on top of their
+                health and nutrition...
               </p>
             </div>
           </motion.div>
@@ -675,12 +664,12 @@ export default function Home() {
             aspiring to become a <b>Full-Stack Web Developer.</b>
           </p>
           <p>
-            Currently studying a{" "}
+            Completed a{" "}
             <b>
               Bachelor of Information Technology at Swinburne University of
               Technology (Majoring in Software Technology).
             </b>{" "}
-            Expected to graduate by the end of 2024.
+            Graduated end of 2024.
           </p>
           <p>
             When I&apos;m not programming you might find me{" "}
