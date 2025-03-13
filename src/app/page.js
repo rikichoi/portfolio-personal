@@ -753,7 +753,7 @@ export default function Home() {
         id="contact"
         className="scroll-mt-16 grid items-center min-h-screen text-white bg-zinc-900"
       >
-        <div className="w-full max-w-[90rem] w-full mx-auto py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
+        <div className="w-full max-w-[90rem] mx-auto py-16 sm:px-2 lg:px-24 sm:text-2xl lg:text-4xl">
           <h1 className="font-bold">CONTACT</h1>
           <p className="sm:text-lg lg:text-2xl">
             I&apos;d love to hear from you! Let&apos;s connect via email or
