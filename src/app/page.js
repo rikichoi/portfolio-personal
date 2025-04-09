@@ -465,7 +465,7 @@ export default function Home() {
               </h1>
               <p className="">
                 ReviewMe is a platform that allows users to post reviews and
-                start threads about ANYTHING!
+                start threads about anything...
               </p>
             </div>
           </motion.div>
@@ -523,7 +523,7 @@ export default function Home() {
               </h1>
               <p className="">
                 An information system that provides business analytics and
-                finance management
+                finance management...
               </p>
             </div>
           </motion.div>
