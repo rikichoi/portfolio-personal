@@ -777,35 +777,63 @@ export default function Home() {
             LinkedIn
           </p>
           <div className="py-10 w-full gap-10 text-4xl flex justify-center text-center items-center flex-row">
-            <Link
-              href="/files/Riki_Choi_Resume.pdf"
-              alt="Riki Choi Resume"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex hover:text-red-600 items-center flex-row"
+            <Tooltip
+              showArrow={true}
+              content="Download CV PDF"
+              className="text-white"
+              color="white"
             >
-              <FaDownload className="text-3xl" />
-            </Link>
-            <Link
-              href="https://github.com/rikichoi"
-              target="_blank"
-              className="flex hover:text-red-600 items-center flex-row"
+              <Link
+                href="/files/Riki_Choi_Resume.pdf"
+                alt="Riki Choi Resume"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex hover:text-red-600 items-center flex-row"
+              >
+                <FaDownload className="text-3xl" />
+              </Link>
+            </Tooltip>
+            <Tooltip
+              showArrow={true}
+              content="GitHub"
+              className="text-white"
+              color="white"
             >
-              <FaGithub />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/rikichoi/"
-              target="_blank"
-              className="flex hover:text-red-600 items-center flex-row"
+              <Link
+                href="https://github.com/rikichoi"
+                target="_blank"
+                className="flex hover:text-red-600 items-center flex-row"
+              >
+                <FaGithub />
+              </Link>
+            </Tooltip>
+            <Tooltip
+              showArrow={true}
+              content="LinkedIn"
+              className="text-white"
+              color="white"
             >
-              <FaLinkedin />
-            </Link>
-            <Link
-              href="mailto:choi.riki@gmail.com"
-              className="flex hover:text-red-600 items-center flex-row"
+              <Link
+                href="https://www.linkedin.com/in/rikichoi/"
+                target="_blank"
+                className="flex hover:text-red-600 items-center flex-row"
+              >
+                <FaLinkedin />
+              </Link>
+            </Tooltip>
+            <Tooltip
+              showArrow={true}
+              content="Email"
+              className="text-white"
+              color="white"
             >
-              <MdOutlineEmail />
-            </Link>
+              <Link
+                href="mailto:choi.riki@gmail.com"
+                className="flex hover:text-red-600 items-center flex-row"
+              >
+                <MdOutlineEmail />
+              </Link>
+            </Tooltip>
           </div>
           <form action={() => submitHandler()}>
             <div className=" font-bold gap-10 flex flex-row items-center justify-center">
