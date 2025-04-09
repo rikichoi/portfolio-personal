@@ -287,17 +287,17 @@ export default function Home() {
             className="text-2xl col-span-2 text-white sm:px-2 lg:pl-24 lg:text-4xl"
           >
             <h1 className="font-anek font-semibold tracking-tight text-xl uppercase mb-5">
-              Work Experience
+              Experience
             </h1>
             <Link
               href="https://www.edable.org.au/"
               target="_blank"
               className="font-kanit select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
             >
-              EdAble
+              EdAble | Admin & Finance Management System
             </Link>
             <h2 className="font-kanit font-semibold tracking-tight">
-              Volunteer Full-Stack Web Developer
+              Full-Stack Developer
             </h2>
             <h2 className="font-kanit text-slate-200 tracking-tight">
               Feb 2022 - Dec 2022
@@ -330,26 +330,43 @@ export default function Home() {
                 Case, Project Management Plan
               </li>
             </ul>
-          </motion.div>
-          <motion.div
-            ref={ref1}
-            variants={{
-              hidden: { opacity: 0, y: 75 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            initial="hidden"
-            animate={mainControls}
-            className="items-center flex justify-center"
-          >
             <Link
-              href="/files/Riki_Choi_Resume.pdf"
-              alt="Riki Choi Resume"
+              href="https://agrihouse.asia/"
               target="_blank"
-              rel="noopener noreferrer"
-              className="bg-zinc-50 hover:bg-zinc-900 hover:border-2 border-2 transition-all duration-500 hover:text-white font-bold py-5 text-gray-950 text-center max-w-40 w-full sm:text-lg lg:text-xl"
+              className="font-kanit mt-6 select-none mb-1.5 font-semibold text-orange-300 tracking-tight relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-orange-300 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
             >
-              RESUME
+              AgriHouse | Cricket Farm Resources Management System & AI RAG
+              Chatbot
             </Link>
+            <h2 className="font-kanit font-semibold tracking-tight">
+              Full-Stack Developer
+            </h2>
+            <h2 className="font-kanit text-slate-200 tracking-tight">
+              Nov 2024 - Jan 2025
+            </h2>
+            <h3 className="text-xl font-reddit font-bold mt-3">
+              Technical Skills:
+            </h3>
+            <ul className="list-disc sm:text-base tracking-wide pl-5 font-reddit text-xl">
+              <li>
+                <span className="font-semibold">Core Technologies:</span> React,
+                NextJS, Vercel, OpenAI, Prisma, MongoDB, LangChain, Auth0
+              </li>
+              <li>
+                <span className="font-semibold">Tools and Libraries:</span>{" "}
+                ShadCn, TailwindCSS, Zod
+              </li>
+              <li>
+                <span className="font-semibold">
+                  Version Control Development:
+                </span>{" "}
+                Git, GitHub, Jira, Visual Studio, ESLint, Prettier
+              </li>
+              <li>
+                <span className="font-semibold">Project Management:</span> Agile
+                Methodology
+              </li>
+            </ul>
           </motion.div>
         </div>
       </div>
@@ -406,7 +423,7 @@ export default function Home() {
             animate={project4Controls}
             className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/reviewme-app.png')]  bg-cover bg-center"
           >
-            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+            <div className="absolute h-1/2 top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full opacity-100 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -442,7 +459,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+            <div className="flex  opacity-100  absolute h-1/2 bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
                 ReviewMe
               </h1>
@@ -463,7 +480,7 @@ export default function Home() {
             animate={project6Controls}
             className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/admindash-app.png')] bg-cover bg-center"
           >
-            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+            <div className="absolute h-1/2 top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 opacity-100  w-full flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row items-center">
                   <FaReact className="mr-3" />
@@ -500,7 +517,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+            <div className="flex absolute h-1/2 bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 opacity-100   text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
                 AdminDash
               </h1>
@@ -523,7 +540,7 @@ export default function Home() {
             animate={project2Controls}
             className="col-span-2 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/open-house-app-agent.png')]  bg-cover bg-center"
           >
-            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 group-hover:opacity-100 opacity-0 w-full -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+            <div className="absolute h-1/2 top-0 bg-blue-500 bg-opacity-30 transition-all duration-500 opacity-100  w-full  flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white space-y-3">
                 <div className="flex flex-row">
                   <FaReact className="mr-3" />
@@ -559,7 +576,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 group-hover:opacity-100 opacity-0 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+            <div className="flex absolute h-1/2 bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 opacity-100  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
                 OpenHouse
               </h1>
@@ -580,7 +597,7 @@ export default function Home() {
             animate={project1Controls}
             className="col-span-3 min-h-40 justify-between rounded-3xl shadow-xl group overflow-hidden relative flex flex-col bg-[url('./images/bitelog-app.png')]  bg-cover bg-center"
           >
-            <div className="absolute h-1/2 group-hover:top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full group-hover:opacity-100 opacity-0 -top-96 flex flex-row pt-12 sm:px-5 px-10 text-4xl">
+            <div className="absolute h-1/2 top-0 bg-blue-500 bg-opacity-30 transition-all duration-500  w-full opacity-100  flex flex-row pt-12 sm:px-5 px-10 text-4xl">
               <div className="text-white flex flex-1">
                 <div className="flex flex-row gap-5 ">
                   <div className="flex flex-col space-y-3">
@@ -636,7 +653,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex  group-hover:opacity-100 opacity-0 absolute h-1/2 group-hover:bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30 -bottom-96  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
+            <div className="flex  opacity-100 absolute h-1/2 bottom-0 transition-all duration-500 bg-blue-500 bg-opacity-30  text-white w-full justify-end sm:px-4 lg:px-10 py-12 flex-col">
               <h1 className="sm:text-2xl lg:text-4xl  font-semibold w-full">
                 BiteLog
               </h1>
